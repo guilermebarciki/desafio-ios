@@ -54,7 +54,7 @@ final class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.axis = .vertical
-        stackView.spacing = 16
+        stackView.spacing = HomeMetrics.Padding.regular
         stackView.backgroundColor = .green
         return stackView
     }()
@@ -76,7 +76,7 @@ final class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.axis = .vertical
-        stackView.spacing = 16
+        stackView.spacing = HomeMetrics.Spacing.regular
         return stackView
     }()
     
@@ -104,25 +104,25 @@ final class HomeViewController: UIViewController {
         NSLayoutConstraint.activate([
             homeImage.topAnchor.constraint(equalTo: view.topAnchor),
             homeImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            homeImage.bottomAnchor.constraint(equalTo: textStackView.topAnchor, constant: -16)
+            homeImage.bottomAnchor.constraint(equalTo: textStackView.topAnchor, constant: -HomeMetrics.Padding.regular)
         ])
         
         NSLayoutConstraint.activate([
             logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-                                           constant: 24),
-            logoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24)
+                                           constant: HomeMetrics.Padding.big),
+            logoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.big)
         ])
         
         NSLayoutConstraint.activate([
             textStackView.topAnchor.constraint(equalTo: view.centerYAnchor),
-            textStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            textStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HomeMetrics.Padding.regular),
+            textStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.regular),
         ])
         
         NSLayoutConstraint.activate([
-            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HomeMetrics.Padding.regular),
+            buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.regular),
+            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -HomeMetrics.Padding.regular)
         ])
         
     }
