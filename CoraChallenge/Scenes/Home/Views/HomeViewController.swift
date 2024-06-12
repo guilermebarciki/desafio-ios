@@ -21,7 +21,6 @@ final class HomeViewController: UIViewController {
     
     private lazy var homeImage: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "home-image"))
-        #warning("remove color")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -93,7 +92,7 @@ final class HomeViewController: UIViewController {
     
     
     private func setupInterface() {
-        view.backgroundColor = .systemPink
+        view.backgroundColor = Colors.Brand.primary.get()
         view.addSubview(homeImage)
         view.addSubview(logoImage)
         view.addSubview(textStackView)
