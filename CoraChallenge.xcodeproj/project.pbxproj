@@ -16,6 +16,8 @@
 		25E213C02C1915C50045D685 /* CoraChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213BF2C1915C50045D685 /* CoraChallengeUITests.swift */; };
 		25E213C22C1915C50045D685 /* CoraChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213C12C1915C50045D685 /* CoraChallengeUITestsLaunchTests.swift */; };
 		25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213D62C1917AB0045D685 /* HomeViewController.swift */; };
+		25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213D92C191FB30045D685 /* CoraButton.swift */; };
+		25E213DD2C1927100045D685 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E213DC2C1927100045D685 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		25E213BF2C1915C50045D685 /* CoraChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraChallengeUITests.swift; sourceTree = "<group>"; };
 		25E213C12C1915C50045D685 /* CoraChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25E213D62C1917AB0045D685 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		25E213D92C191FB30045D685 /* CoraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraButton.swift; sourceTree = "<group>"; };
+		25E213DC2C1927100045D685 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		25E2139D2C1915C10045D685 /* CoraChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				25E213DB2C1926FC0045D685 /* Assets */,
+				25E213D82C191F9D0045D685 /* UIComponents */,
 				25E213CF2C1916CF0045D685 /* Scenes */,
 				25E213CE2C19168C0045D685 /* Supporting Files */,
 				25E213A22C1915C10045D685 /* ViewController.swift */,
@@ -189,6 +195,22 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		25E213D82C191F9D0045D685 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				25E213D92C191FB30045D685 /* CoraButton.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		25E213DB2C1926FC0045D685 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				25E213DC2C1927100045D685 /* Images.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E213DD2C1927100045D685 /* Images.xcassets in Resources */,
 				25E213AB2C1915C50045D685 /* LaunchScreen.storyboard in Resources */,
 				25E213A82C1915C50045D685 /* Assets.xcassets in Resources */,
 			);
@@ -324,6 +347,7 @@
 				25E213A32C1915C10045D685 /* ViewController.swift in Sources */,
 				25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
+				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
