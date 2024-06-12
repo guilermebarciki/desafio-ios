@@ -11,6 +11,7 @@
 		255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BFB962C1A2CF100909DF8 /* GlobalMetrics.swift */; };
 		255BFB992C1A2F1E00909DF8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255BFB982C1A2F1E00909DF8 /* Colors.xcassets */; };
 		255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BFB9A2C1A306600909DF8 /* Colors.swift */; };
+		255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BFB9C2C1A354F00909DF8 /* HomeImages.swift */; };
 		25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2139E2C1915C10045D685 /* AppDelegate.swift */; };
 		25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A02C1915C10045D685 /* SceneDelegate.swift */; };
 		25E213A32C1915C10045D685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A22C1915C10045D685 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		255BFB962C1A2CF100909DF8 /* GlobalMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMetrics.swift; sourceTree = "<group>"; };
 		255BFB982C1A2F1E00909DF8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		255BFB9A2C1A306600909DF8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		255BFB9C2C1A354F00909DF8 /* HomeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImages.swift; sourceTree = "<group>"; };
 		25E2139B2C1915C10045D685 /* CoraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2139E2C1915C10045D685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E213A02C1915C10045D685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		25E213D52C19175C0045D685 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				255BFB9C2C1A354F00909DF8 /* HomeImages.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
+				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
 				255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */,
 			);

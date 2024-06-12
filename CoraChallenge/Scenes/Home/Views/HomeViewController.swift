@@ -13,14 +13,14 @@ final class HomeViewController: UIViewController {
     
     private lazy var logoImage: UIImageView = {
         let imageView = UIImageView()
-        #warning("remove color")
-        imageView.backgroundColor = .green
+        imageView.image = HomeImages.General.logo.getImage()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private lazy var homeImage: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "home-image"))
+        let imageView = UIImageView()
+        imageView.image = HomeImages.General.banner.getImage()
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
