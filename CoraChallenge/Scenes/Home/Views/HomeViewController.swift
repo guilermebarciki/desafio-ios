@@ -29,7 +29,7 @@ final class HomeViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .bold(.title1)
-        label.text = "Conta Digital PJ\nPoderosamente simples"
+        label.text = HomeStrings.View.title.localized
         label.numberOfLines = 0
         return label
     }()
@@ -43,7 +43,7 @@ final class HomeViewController: UIViewController {
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .regular(.body1)
-        label.text = "Sua empresa livre burocracias e de taxas para gerar boletos, fazer transferências e pagamentos."
+        label.text = HomeStrings.View.description.localized
         label.numberOfLines = 0
         return label
     }()
