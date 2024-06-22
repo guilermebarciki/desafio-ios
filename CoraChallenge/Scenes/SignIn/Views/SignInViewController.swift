@@ -78,6 +78,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
         setupInterface()
         setupConstraints()
         applyNavigationStyle()
+        dismissKeyboardWhenTappedOutside()
     }
     
     override func viewDidAppear(_ animated: Bool) {

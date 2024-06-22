@@ -36,6 +36,7 @@
 		25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F982C2762E30034EE55 /* SignInImages.swift */; };
 		25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F9A2C2762E30034EE55 /* SignInViewController.swift */; };
 		25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */; };
+		25F55FA52C277B8C0034EE55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		25F55F982C2762E30034EE55 /* SignInImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInImages.swift; sourceTree = "<group>"; };
 		25F55F9A2C2762E30034EE55 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraNavigationStylable.swift; sourceTree = "<group>"; };
+		25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 		25F55F602C2654D00034EE55 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				25F55FA32C277B0F0034EE55 /* Extensions */,
 				25F55F612C2654E10034EE55 /* Protocols */,
 			);
 			path = Essentials;
@@ -385,6 +388,14 @@
 				25F55F9A2C2762E30034EE55 /* SignInViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		25F55FA32C277B0F0034EE55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +542,7 @@
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
+				25F55FA52C277B8C0034EE55 /* UIViewController+Extensions.swift in Sources */,
 				25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
