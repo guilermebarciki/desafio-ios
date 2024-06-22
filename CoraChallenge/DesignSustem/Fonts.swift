@@ -31,11 +31,11 @@ enum CoraFontSize {
 }
 
 extension UIFont {
-    static func regular(_ size: CoraFontSize) -> UIFont? {
-        return UIFont(name: CoraFontName.regular, size: size.size)
+    static func regular(_ size: CoraFontSize) -> UIFont {
+        return UIFont(name: CoraFontName.regular, size: size.size) ?? UIFont()
     }
     
-    static func bold(_ size: CoraFontSize) -> UIFont? {
-        return UIFont(name: CoraFontName.bold, size: size.size)
+    static func bold(_ size: CoraFontSize) -> UIFont {
+        return UIFont(name: CoraFontName.bold, size: size.size) ?? UIFont()
     }
 }

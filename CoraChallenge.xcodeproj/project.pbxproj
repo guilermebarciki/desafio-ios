@@ -27,6 +27,7 @@
 		25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F5E2C2654A50034EE55 /* HomeStrings.swift */; };
 		25F55F632C2654F10034EE55 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F622C2654F10034EE55 /* Localize.swift */; };
 		25F55F652C2655A40034EE55 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F55F642C2655A40034EE55 /* Home.strings */; };
+		25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F672C275C1E0034EE55 /* CoraButtonMetrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		25F55F5E2C2654A50034EE55 /* HomeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStrings.swift; sourceTree = "<group>"; };
 		25F55F622C2654F10034EE55 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		25F55F642C2655A40034EE55 /* Home.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Home.strings; sourceTree = "<group>"; };
+		25F55F672C275C1E0034EE55 /* CoraButtonMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraButtonMetrics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +259,7 @@
 		25E213D82C191F9D0045D685 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				25E213D92C191FB30045D685 /* CoraButton.swift */,
+				25F55F662C2752B20034EE55 /* CoraButton */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -294,6 +296,15 @@
 				25F55F622C2654F10034EE55 /* Localize.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		25F55F662C2752B20034EE55 /* CoraButton */ = {
+			isa = PBXGroup;
+			children = (
+				25E213D92C191FB30045D685 /* CoraButton.swift */,
+				25F55F672C275C1E0034EE55 /* CoraButtonMetrics.swift */,
+			);
+			path = CoraButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +444,7 @@
 				25E213A32C1915C10045D685 /* ViewController.swift in Sources */,
 				255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */,
 				25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */,
+				25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,

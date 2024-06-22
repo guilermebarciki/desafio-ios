@@ -30,7 +30,7 @@ final class HomeViewController: UIViewController {
         let label = UILabel()
         label.font = .bold(.title1)
         label.text = HomeStrings.View.title.localized
-        label.tintColor = Colors.Neutral.white.color
+        label.textColor = Colors.Neutral.white.color
         label.numberOfLines = 0
         return label
     }()
@@ -45,7 +45,7 @@ final class HomeViewController: UIViewController {
         let label = UILabel()
         label.font = .regular(.body1)
         label.text = HomeStrings.View.description.localized
-        label.tintColor = Colors.Neutral.white.color
+        label.textColor = Colors.Neutral.white.color
         label.numberOfLines = 0
         return label
     }()
@@ -56,19 +56,26 @@ final class HomeViewController: UIViewController {
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.axis = .vertical
         stackView.spacing = HomeMetrics.Padding.regular
-        stackView.backgroundColor = .green
         return stackView
     }()
     
     private lazy var signUpButton: CoraButton = {
-        //botaozao
-        let button = CoraButton()
+        let button = CoraButton(
+            title: HomeStrings.View.signupButton.localized,
+            size: .big,
+            style: .secondary,
+            icon: HomeImages.General.logo.getImage()
+        )
         return button
     }()
     
     private lazy var signInButton: CoraButton = {
-        // ja sou cliente
-        let button = CoraButton()
+        let button = CoraButton(
+            title: HomeStrings.View.signinButton.localized,
+            size: .regular,
+            style: .simple,
+            action: nil
+        )
         return button
     }()
     
@@ -128,5 +135,4 @@ final class HomeViewController: UIViewController {
         
     }
     
-    // MARK: - Private Methods
 }
