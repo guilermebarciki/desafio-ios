@@ -23,6 +23,7 @@
 		25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213D62C1917AB0045D685 /* HomeViewController.swift */; };
 		25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213D92C191FB30045D685 /* CoraButton.swift */; };
 		25E213DD2C1927100045D685 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E213DC2C1927100045D685 /* Images.xcassets */; };
+		25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F5B2C264C780034EE55 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		25E213D62C1917AB0045D685 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		25E213D92C191FB30045D685 /* CoraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraButton.swift; sourceTree = "<group>"; };
 		25E213DC2C1927100045D685 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		25F55F5B2C264C780034EE55 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,11 @@
 		255BFB942C1A2CDB00909DF8 /* DesignSustem */ = {
 			isa = PBXGroup;
 			children = (
+				25BCD7462C206251000FE3D2 /* Resources */,
 				255BFB952C1A2CE600909DF8 /* Metrics */,
 				25E213D82C191F9D0045D685 /* UIComponents */,
 				255BFB9A2C1A306600909DF8 /* Colors.swift */,
+				25F55F5B2C264C780034EE55 /* Fonts.swift */,
 			);
 			path = DesignSustem;
 			sourceTree = "<group>";
@@ -114,6 +118,13 @@
 				255BFB962C1A2CF100909DF8 /* GlobalMetrics.swift */,
 			);
 			path = Metrics;
+			sourceTree = "<group>";
+		};
+		25BCD7462C206251000FE3D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		25E213922C1915C10045D685 = {
@@ -390,6 +401,7 @@
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
+				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
 				255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */,
