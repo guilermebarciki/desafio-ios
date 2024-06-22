@@ -27,8 +27,9 @@ extension LocalizeRepresentable where RawValue == String {
 // MARK: - Feature Tables
 
 enum LocalizeTable: String {
-
-   case home = "Home"
+    
+    case home = "Home"
+    case signIn = "SignIn"
     
 }
 

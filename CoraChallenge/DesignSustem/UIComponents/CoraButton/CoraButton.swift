@@ -85,8 +85,8 @@ extension CoraButton {
         
         NSLayoutConstraint.activate([
             stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CoraButtonMetrics.Padding.regular),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CoraButtonMetrics.Padding.regular)
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CoraButtonMetrics.Padding.big),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CoraButtonMetrics.Padding.big)
         ])
     }
     

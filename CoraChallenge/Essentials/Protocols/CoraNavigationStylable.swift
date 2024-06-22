@@ -8,11 +8,11 @@
 import UIKit
 
 
-protocol CoraNavigationStyling {
+protocol CoraNavigationStylable {
     func applyNavigationStyle()
 }
 
-extension CoraNavigationStyling where Self: UIViewController {
+extension CoraNavigationStylable where Self: UIViewController {
     func applyNavigationStyle() {
         let font: UIFont = .regular(.body2)
         

@@ -13,6 +13,7 @@ enum GlobalMetrics {
         static let small: CGFloat = 8
         static let regular: CGFloat = 16
         static let big: CGFloat = 24
+        static let extraLarge: CGFloat = 32
     }
     
 }
