@@ -42,7 +42,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
             title: "Próximo",
             size: .regular,
             style: .primary,
-            icon: HomeImages.General.logo.getImage(),
+            icon: GlobalImages.Icons.next.getImage(),
             isActive: false,
             action: {
                 print("pressed")

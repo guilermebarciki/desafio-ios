@@ -34,8 +34,10 @@ final class CoraButton: UIButton {
         self.isActive = isActive
         super.init(frame: .zero)
         isEnabled = isActive
+        updateAppearance()
         setupButton(title: title, size: size, style: style, icon: icon)
         setupAction(with: action)
+        updateAppearance()
         
     }
     
@@ -53,13 +55,12 @@ extension CoraButton {
     
     private func setupButton(title: String, size: Size, style: Style, icon: UIImage?) {
         setupTitle(title: title, size: size, style: style)
-        
         backgroundColor = style.backgroundColor
         layer.cornerRadius = size.cornerRadius
         translatesAutoresizingMaskIntoConstraints = false
         
         if let icon = icon {
-            setupWithIcon(icon: icon)
+            setupWithIcon(icon: icon, style: style)
         }
         
         NSLayoutConstraint.activate([
@@ -69,16 +70,18 @@ extension CoraButton {
     
     private func setupTitle(title: String, size: Size, style: Style) {
         setTitle(title, for: .normal)
-        setTitleColor(style.titleColor, for: .normal)
+        setTitleColor(style.tintColor, for: .normal)
         titleLabel?.font = size.font
     }
     
-    private func setupWithIcon(icon: UIImage) {
+    private func setupWithIcon(icon: UIImage, style: Style) {
         iconImageView.image = icon
+        iconImageView.tintColor = style.tintColor
         
         if let titleLabel {
             stackView.addArrangedSubview(titleLabel)
         }
+        
         stackView.addArrangedSubview(iconImageView)
         
         addSubview(stackView)
@@ -167,7 +170,7 @@ extension CoraButton {
             }
         }
         
-        var titleColor: UIColor {
+        var tintColor: UIColor {
             switch self {
             case .primary, .simple:
                 return Colors.Neutral.white.color

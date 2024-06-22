@@ -37,6 +37,7 @@
 		25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F9A2C2762E30034EE55 /* SignInViewController.swift */; };
 		25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */; };
 		25F55FA52C277B8C0034EE55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */; };
+		25F55FA72C277E030034EE55 /* GlobalImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA62C277E030034EE55 /* GlobalImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		25F55F9A2C2762E30034EE55 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraNavigationStylable.swift; sourceTree = "<group>"; };
 		25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		25F55FA62C277E030034EE55 /* GlobalImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		25BCD7462C206251000FE3D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				25F55FA62C277E030034EE55 /* GlobalImages.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			files = (
 				25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */,
 				25F55F632C2654F10034EE55 /* Localize.swift in Sources */,
+				25F55FA72C277E030034EE55 /* GlobalImages.swift in Sources */,
 				25E213A32C1915C10045D685 /* ViewController.swift in Sources */,
 				255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */,
 				25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */,

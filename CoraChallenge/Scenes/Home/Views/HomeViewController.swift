@@ -65,7 +65,7 @@ final class HomeViewController: UIViewController {
             title: HomeStrings.View.signupButton.localized,
             size: .big,
             style: .secondary,
-            icon: HomeImages.General.logo.getImage()
+            icon: GlobalImages.Icons.next.getImage()
         )
         return button
     }()
