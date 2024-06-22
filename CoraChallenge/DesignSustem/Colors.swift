@@ -7,36 +7,40 @@
 
 import UIKit
 
+import UIKit
+
 public final class Colors {
-    
+
+    private static func get(named name: String) -> UIColor {
+        return UIColor(named: name, in: Bundle(for: Colors.self), compatibleWith: nil) ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+
     public enum Brand: String {
         case primary
-        
-        public func get() -> UIColor {
-            return UIColor(named: self.rawValue, in: Bundle(for: Colors.self), compatibleWith: nil) ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+
+        public var color: UIColor {
+            return Colors.get(named: self.rawValue)
         }
     }
     
-    public enum Neutral: String {
+    public enum Highlight: String {
+        case blue
 
+        public var color: UIColor {
+            return Colors.get(named: self.rawValue)
+        }
+    }
+
+    public enum Neutral: String {
         case gray01
         case gray02
         case gray03
         case black
-        
-        public func get() -> UIColor {
-            return UIColor(named: self.rawValue, in: Bundle(for: Colors.self), compatibleWith: nil) ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        }
-    }
-    
-    public enum Background: String {
-
         case white
-        
-        public func get() -> UIColor {
-            return UIColor(named: self.rawValue, in: Bundle(for: Colors.self), compatibleWith: nil) ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+
+        public var color: UIColor {
+            return Colors.get(named: self.rawValue)
         }
     }
-    
-}
 
+}

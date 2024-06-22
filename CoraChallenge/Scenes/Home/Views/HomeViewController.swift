@@ -30,6 +30,7 @@ final class HomeViewController: UIViewController {
         let label = UILabel()
         label.font = .bold(.title1)
         label.text = HomeStrings.View.title.localized
+        label.tintColor = Colors.Neutral.white.color
         label.numberOfLines = 0
         return label
     }()
@@ -44,6 +45,7 @@ final class HomeViewController: UIViewController {
         let label = UILabel()
         label.font = .regular(.body1)
         label.text = HomeStrings.View.description.localized
+        label.tintColor = Colors.Neutral.white.color
         label.numberOfLines = 0
         return label
     }()
@@ -92,7 +94,7 @@ final class HomeViewController: UIViewController {
     
     
     private func setupInterface() {
-        view.backgroundColor = Colors.Brand.primary.get()
+        view.backgroundColor = Colors.Brand.primary.color
         view.addSubview(homeImage)
         view.addSubview(logoImage)
         view.addSubview(textStackView)
