@@ -35,9 +35,10 @@ final class HomeViewController: UIViewController {
         return label
     }()
     
+
+#warning("solve subtitle")
 //    private lazy var subTitleLabel: UILabel = {
 //        let label = UILabel()
-//    #warning("make style")
 //        return label
 //    }()
     
@@ -74,7 +75,9 @@ final class HomeViewController: UIViewController {
             title: HomeStrings.View.signinButton.localized,
             size: .regular,
             style: .simple,
-            action: nil
+            action: {
+                self.router?.navigateSignIn()
+            }
         )
         return button
     }()
@@ -88,6 +91,11 @@ final class HomeViewController: UIViewController {
         return stackView
     }()
     
+    private lazy var router: HomeRouter? = {
+        guard let navigationController = navigationController else { return nil }
+        return HomeRouter(with: navigationController)
+    }()
+    
     
     // MARK: - Life Cycle
     
@@ -95,6 +103,10 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupInterface()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: - View Setup

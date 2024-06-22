@@ -28,6 +28,14 @@
 		25F55F632C2654F10034EE55 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F622C2654F10034EE55 /* Localize.swift */; };
 		25F55F652C2655A40034EE55 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F55F642C2655A40034EE55 /* Home.strings */; };
 		25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F672C275C1E0034EE55 /* CoraButtonMetrics.swift */; };
+		25F55F6A2C27604B0034EE55 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F692C27604B0034EE55 /* HomeRouter.swift */; };
+		25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F902C2762E20034EE55 /* SignInRouter.swift */; };
+		25F55F9C2C2762E30034EE55 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F922C2762E20034EE55 /* SignInViewModel.swift */; };
+		25F55F9D2C2762E30034EE55 /* SignInStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F952C2762E30034EE55 /* SignInStrings.swift */; };
+		25F55F9E2C2762E30034EE55 /* SignIn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F55F962C2762E30034EE55 /* SignIn.strings */; };
+		25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F982C2762E30034EE55 /* SignInImages.swift */; };
+		25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55F9A2C2762E30034EE55 /* SignInViewController.swift */; };
+		25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,14 @@
 		25F55F622C2654F10034EE55 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		25F55F642C2655A40034EE55 /* Home.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Home.strings; sourceTree = "<group>"; };
 		25F55F672C275C1E0034EE55 /* CoraButtonMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraButtonMetrics.swift; sourceTree = "<group>"; };
+		25F55F692C27604B0034EE55 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		25F55F902C2762E20034EE55 /* SignInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		25F55F922C2762E20034EE55 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		25F55F952C2762E30034EE55 /* SignInStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInStrings.swift; sourceTree = "<group>"; };
+		25F55F962C2762E30034EE55 /* SignIn.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SignIn.strings; sourceTree = "<group>"; };
+		25F55F982C2762E30034EE55 /* SignInImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInImages.swift; sourceTree = "<group>"; };
+		25F55F9A2C2762E30034EE55 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraNavigationStylable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +216,7 @@
 		25E213CF2C1916CF0045D685 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				25F55F862C2762230034EE55 /* SignIn */,
 				25E213D02C1916DF0045D685 /* Home */,
 			);
 			path = Scenes;
@@ -243,6 +260,7 @@
 		25E213D42C19174E0045D685 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				25F55F692C27604B0034EE55 /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -294,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				25F55F622C2654F10034EE55 /* Localize.swift */,
+				25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -305,6 +324,67 @@
 				25F55F672C275C1E0034EE55 /* CoraButtonMetrics.swift */,
 			);
 			path = CoraButton;
+			sourceTree = "<group>";
+		};
+		25F55F862C2762230034EE55 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F932C2762E30034EE55 /* Resources */,
+				25F55F8F2C2762E20034EE55 /* Router */,
+				25F55F912C2762E20034EE55 /* ViewModel */,
+				25F55F992C2762E30034EE55 /* Views */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		25F55F8F2C2762E20034EE55 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F902C2762E20034EE55 /* SignInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		25F55F912C2762E20034EE55 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F922C2762E20034EE55 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25F55F932C2762E30034EE55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F942C2762E30034EE55 /* Strings */,
+				25F55F972C2762E30034EE55 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25F55F942C2762E30034EE55 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F952C2762E30034EE55 /* SignInStrings.swift */,
+				25F55F962C2762E30034EE55 /* SignIn.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		25F55F972C2762E30034EE55 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F982C2762E30034EE55 /* SignInImages.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		25F55F992C2762E30034EE55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25F55F9A2C2762E30034EE55 /* SignInViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +494,7 @@
 				25E213DD2C1927100045D685 /* Images.xcassets in Resources */,
 				255BFB992C1A2F1E00909DF8 /* Colors.xcassets in Resources */,
 				25E213AB2C1915C50045D685 /* LaunchScreen.storyboard in Resources */,
+				25F55F9E2C2762E30034EE55 /* SignIn.strings in Resources */,
 				25E213A82C1915C50045D685 /* Assets.xcassets in Resources */,
 				25F55F652C2655A40034EE55 /* Home.strings in Resources */,
 			);
@@ -440,18 +521,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */,
 				25F55F632C2654F10034EE55 /* Localize.swift in Sources */,
 				25E213A32C1915C10045D685 /* ViewController.swift in Sources */,
 				255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */,
 				25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */,
+				25F55F9C2C2762E30034EE55 /* SignInViewModel.swift in Sources */,
 				25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
+				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
+				25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
+				25F55F6A2C27604B0034EE55 /* HomeRouter.swift in Sources */,
 				25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */,
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
+				25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */,
+				25F55F9D2C2762E30034EE55 /* SignInStrings.swift in Sources */,
 				255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
