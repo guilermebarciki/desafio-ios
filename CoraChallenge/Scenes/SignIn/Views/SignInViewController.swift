@@ -1,4 +1,4 @@
-//  
+//
 //  SignInViewController.swift
 //  CoraChallenge
 //
@@ -52,7 +52,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
         return button
     }()
     
-    #warning("pode fazer um CoraTextField")
+#warning("pode fazer um CoraTextField")
     private lazy var cpfTextField: UITextField = {
         let textField = UITextField()
         textField.keyboardType = .numberPad
@@ -112,17 +112,17 @@ extension SignInViewController {
         NSLayoutConstraint.activate([
             cpfTextField.topAnchor.constraint(equalTo: textsStackView.bottomAnchor, constant: GlobalMetrics.Padding.extraLarge),
             cpfTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                               constant: -GlobalMetrics.Padding.regular),
+                                                   constant: -GlobalMetrics.Padding.regular),
             cpfTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                              constant: GlobalMetrics.Padding.regular)
+                                                  constant: GlobalMetrics.Padding.regular)
         ])
         
         NSLayoutConstraint.activate([
             navigationButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -GlobalMetrics.Padding.big),
             navigationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                     constant: -GlobalMetrics.Padding.regular),
+                                                       constant: -GlobalMetrics.Padding.regular),
             navigationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                    constant: GlobalMetrics.Padding.regular)
+                                                      constant: GlobalMetrics.Padding.regular)
         ])
     }
     
@@ -130,36 +130,42 @@ extension SignInViewController {
 
 
 // MARK: - Private methods
-    
+
 extension SignInViewController {}
 
 
 // MARK: - Public methods
-    
+
 extension SignInViewController {}
 
 
 // MARK: - Actions
-    
+
 extension SignInViewController {}
 
 
 // MARK: - SignInDelegate
 
-extension SignInViewController: SignInDelegate {}
+extension SignInViewController: SignInDelegate {
+    func updateButtonState(isActive: Bool) {
+        self.navigationButton.setActive(isActive)
+    }
+}
 
 
 // MARK: - UITextFieldDelegate
 
 extension SignInViewController: UITextFieldDelegate {
+    
     func textField(
         _ textField: UITextField,
         shouldChangeCharactersIn range: NSRange,
         replacementString string: String
     ) -> Bool {
-        let fieldText = (textField.text ?? "") as NSString
-        let newText = fieldText.replacingCharacters(in: range, with: string)
-//        interactor.didChangeText(to: newText) validation
-        return true
+        return CPFMask().shouldChangeCharactersIn(textField, range: range, replacementString: string)
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        viewModel.validateCPF(textField.text)
     }
 }

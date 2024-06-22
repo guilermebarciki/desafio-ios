@@ -38,6 +38,9 @@
 		25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */; };
 		25F55FA52C277B8C0034EE55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */; };
 		25F55FA72C277E030034EE55 /* GlobalImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA62C277E030034EE55 /* GlobalImages.swift */; };
+		25F55FA92C2784EB0034EE55 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FA82C2784EB0034EE55 /* String+Extensions.swift */; };
+		25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FAA2C2786E00034EE55 /* MaskProtocol.swift */; };
+		25F55FAF2C2787520034EE55 /* CPFMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FAE2C2787520034EE55 /* CPFMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraNavigationStylable.swift; sourceTree = "<group>"; };
 		25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		25F55FA62C277E030034EE55 /* GlobalImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImages.swift; sourceTree = "<group>"; };
+		25F55FA82C2784EB0034EE55 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		25F55FAA2C2786E00034EE55 /* MaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskProtocol.swift; sourceTree = "<group>"; };
+		25F55FAE2C2787520034EE55 /* CPFMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +314,7 @@
 		25F55F602C2654D00034EE55 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				25F55FAC2C27873F0034EE55 /* Common */,
 				25F55FA32C277B0F0034EE55 /* Extensions */,
 				25F55F612C2654E10034EE55 /* Protocols */,
 			);
@@ -319,6 +326,7 @@
 			children = (
 				25F55F622C2654F10034EE55 /* Localize.swift */,
 				25F55FA12C2769A80034EE55 /* CoraNavigationStylable.swift */,
+				25F55FAA2C2786E00034EE55 /* MaskProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -397,8 +405,25 @@
 			isa = PBXGroup;
 			children = (
 				25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */,
+				25F55FA82C2784EB0034EE55 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		25F55FAC2C27873F0034EE55 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FAD2C2787470034EE55 /* Masks */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		25F55FAD2C2787470034EE55 /* Masks */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FAE2C2787520034EE55 /* CPFMask.swift */,
+			);
+			path = Masks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,6 +568,7 @@
 				25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */,
 				25F55F9C2C2762E30034EE55 /* SignInViewModel.swift in Sources */,
 				25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */,
+				25F55FAF2C2787520034EE55 /* CPFMask.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
@@ -554,6 +580,8 @@
 				25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */,
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
+				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,
+				25F55FA92C2784EB0034EE55 /* String+Extensions.swift in Sources */,
 				25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */,
 				25F55F9D2C2762E30034EE55 /* SignInStrings.swift in Sources */,
 				255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */,
