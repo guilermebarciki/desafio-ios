@@ -28,3 +28,37 @@ extension UIViewController {
     }
     
 }
+
+
+extension UIViewController {
+   
+    private struct LoadingIndicator {
+        static var activityIndicator: UIActivityIndicatorView?
+    }
+    
+    func showLoadingIndicator() {
+        if LoadingIndicator.activityIndicator == nil {
+            let activityIndicator = UIActivityIndicatorView(style: .large)
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            activityIndicator.hidesWhenStopped = true
+            LoadingIndicator.activityIndicator = activityIndicator
+            
+            view.addSubview(activityIndicator)
+            NSLayoutConstraint.activate([
+                activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        }
+        
+        DispatchQueue.main.async {
+            LoadingIndicator.activityIndicator?.startAnimating()
+        }
+    }
+    
+    func hideLoadingIndicator() {
+        DispatchQueue.main.async {
+            LoadingIndicator.activityIndicator?.stopAnimating()
+        }
+    }
+    
+}

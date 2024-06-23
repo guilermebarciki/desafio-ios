@@ -49,7 +49,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
             icon: GlobalImages.Icons.next.getImage(),
             isActive: false,
             action: { [weak self] in
-                self?.viewModel.signIn()
+                self?.login()
             }
         )
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -160,7 +160,14 @@ extension PasswordViewController {}
 
 // MARK: - Actions
     
-extension PasswordViewController {}
+extension PasswordViewController {
+    
+    func login() {
+        showLoadingIndicator()
+        viewModel.signIn()
+    }
+    
+}
 
 
 // MARK: - PasswordDelegate
@@ -168,11 +175,18 @@ extension PasswordViewController {}
 extension PasswordViewController: PasswordDelegate {
     
     func signInSuccess() {
-        //route to list
+        DispatchQueue.main.async { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.displayAlert(title: "deu boa", message: publicToken)
+        }
+
     }
     
     func signInFail(with title: String, and message: String) {
-        displayAlert(title: title, message: message)
+        DispatchQueue.main.async { [weak self] in
+            self?.hideLoadingIndicator()
+            self?.displayAlert(title: title, message: message)
+        }
     }
     
     func updateLoginButtonState(isActive: Bool) {

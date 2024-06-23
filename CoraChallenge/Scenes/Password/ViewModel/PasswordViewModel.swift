@@ -1,4 +1,4 @@
-//  
+//
 //  PasswordViewModel.swift
 //  CoraChallenge
 //
@@ -15,20 +15,24 @@ protocol PasswordDelegate: AnyObject {
 
 typealias PasswordNavigationData = String
 
+
 class PasswordViewModel {
     
     
     // MARK: - Properties
     
     private var password: String?
+    private var cpf: String?
     
     weak var delegate: PasswordDelegate?
+    private let authService: AuthServiceProtocol
     
     
     // MARK: - Init
     
-    init(delegate: PasswordDelegate?) {
+    init(delegate: PasswordDelegate?, authService: AuthServiceProtocol = AuthService()) {
         self.delegate = delegate
+        self.authService = authService
     }
     
 }
@@ -38,10 +42,12 @@ class PasswordViewModel {
 
 extension PasswordViewModel {
     
-    func prepareForNavigation(with navigationData: PasswordNavigationData) {}
+    func prepareForNavigation(with navigationData: PasswordNavigationData) {
+        self.cpf = navigationData
+    }
     
 }
-    
+
 
 // MARK: - Fetch Methods
 
@@ -53,8 +59,20 @@ extension PasswordViewModel {
     }
     
     func signIn() {
-//        delegate?.signInSuccess()
-        delegate?.signInFail(with: "Falha de Login", and: "Algo deu errado.")
+        Task {
+            guard let password,
+                  let cpf else { return }
+            
+            let result = await authService.login(cpf: cpf, password: password)
+            
+            switch result {
+            case .success(let token):
+                CoraSession.current.setToken(with: token)
+                delegate?.signInSuccess()
+            case .failure(let error):
+                delegate?.signInFail(with: "Falha de Login", and: error.localizedDescription)
+            }
+        }
     }
     
 }

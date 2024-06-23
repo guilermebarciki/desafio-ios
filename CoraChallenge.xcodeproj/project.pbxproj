@@ -53,6 +53,19 @@
 		25F55FD32C289B080034EE55 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD22C289B080034EE55 /* AuthService.swift */; };
 		25F55FD52C289B2F0034EE55 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD42C289B2F0034EE55 /* ListService.swift */; };
 		25F55FD72C289BA20034EE55 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD62C289BA20034EE55 /* APIService.swift */; };
+		25F55FEE2C28C6830034EE55 /* TransactionList.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F55FE42C28C6830034EE55 /* TransactionList.strings */; };
+		25F55FEF2C28C6830034EE55 /* TransactionListStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FE52C28C6830034EE55 /* TransactionListStrings.swift */; };
+		25F55FF02C28C6830034EE55 /* TransactionListImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FE72C28C6830034EE55 /* TransactionListImages.swift */; };
+		25F55FF12C28C6830034EE55 /* TransactionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FE92C28C6830034EE55 /* TransactionListRouter.swift */; };
+		25F55FF22C28C6830034EE55 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FEB2C28C6830034EE55 /* TransactionListViewController.swift */; };
+		25F55FF32C28C6830034EE55 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FED2C28C6830034EE55 /* TransactionListViewModel.swift */; };
+		25F5600A2C28C6BE0034EE55 /* TransactionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FFF2C28C6BE0034EE55 /* TransactionDetailRouter.swift */; };
+		25F5600B2C28C6BE0034EE55 /* TransactionDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F560022C28C6BE0034EE55 /* TransactionDetail.strings */; };
+		25F5600C2C28C6BE0034EE55 /* TransactionDetailStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560032C28C6BE0034EE55 /* TransactionDetailStrings.swift */; };
+		25F5600D2C28C6BE0034EE55 /* TransactionDetailImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560052C28C6BE0034EE55 /* TransactionDetailImages.swift */; };
+		25F5600E2C28C6BE0034EE55 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560072C28C6BE0034EE55 /* TransactionDetailViewController.swift */; };
+		25F5600F2C28C6BE0034EE55 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560092C28C6BE0034EE55 /* TransactionDetailViewModel.swift */; };
+		25F560122C28C7720034EE55 /* CoraSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560112C28C7720034EE55 /* CoraSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +136,19 @@
 		25F55FD22C289B080034EE55 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		25F55FD42C289B2F0034EE55 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
 		25F55FD62C289BA20034EE55 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		25F55FE42C28C6830034EE55 /* TransactionList.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TransactionList.strings; sourceTree = "<group>"; };
+		25F55FE52C28C6830034EE55 /* TransactionListStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListStrings.swift; sourceTree = "<group>"; };
+		25F55FE72C28C6830034EE55 /* TransactionListImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListImages.swift; sourceTree = "<group>"; };
+		25F55FE92C28C6830034EE55 /* TransactionListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListRouter.swift; sourceTree = "<group>"; };
+		25F55FEB2C28C6830034EE55 /* TransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		25F55FED2C28C6830034EE55 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		25F55FFF2C28C6BE0034EE55 /* TransactionDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailRouter.swift; sourceTree = "<group>"; };
+		25F560022C28C6BE0034EE55 /* TransactionDetail.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TransactionDetail.strings; sourceTree = "<group>"; };
+		25F560032C28C6BE0034EE55 /* TransactionDetailStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailStrings.swift; sourceTree = "<group>"; };
+		25F560052C28C6BE0034EE55 /* TransactionDetailImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailImages.swift; sourceTree = "<group>"; };
+		25F560072C28C6BE0034EE55 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		25F560092C28C6BE0034EE55 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		25F560112C28C7720034EE55 /* CoraSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +278,8 @@
 		25E213CF2C1916CF0045D685 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				25F55FD92C28C65B0034EE55 /* TransactionDetail */,
+				25F55FD82C28C6530034EE55 /* TransactionList */,
 				25F55FB02C2794820034EE55 /* Password */,
 				25F55F862C2762230034EE55 /* SignIn */,
 				25E213D02C1916DF0045D685 /* Home */,
@@ -341,6 +369,7 @@
 		25F55F602C2654D00034EE55 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				25F560102C28C75A0034EE55 /* CoraSession */,
 				25F55FAC2C27873F0034EE55 /* Common */,
 				25F55FA32C277B0F0034EE55 /* Extensions */,
 				25F55F612C2654E10034EE55 /* Protocols */,
@@ -526,6 +555,136 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		25F55FD82C28C6530034EE55 /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FE22C28C6830034EE55 /* Resources */,
+				25F55FE82C28C6830034EE55 /* Router */,
+				25F55FEC2C28C6830034EE55 /* ViewModel */,
+				25F55FEA2C28C6830034EE55 /* Views */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		25F55FD92C28C65B0034EE55 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				25F560002C28C6BE0034EE55 /* Resources */,
+				25F55FFE2C28C6BE0034EE55 /* Router */,
+				25F560082C28C6BE0034EE55 /* ViewModel */,
+				25F560062C28C6BE0034EE55 /* Views */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		25F55FE22C28C6830034EE55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FE32C28C6830034EE55 /* Strings */,
+				25F55FE62C28C6830034EE55 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25F55FE32C28C6830034EE55 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FE42C28C6830034EE55 /* TransactionList.strings */,
+				25F55FE52C28C6830034EE55 /* TransactionListStrings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		25F55FE62C28C6830034EE55 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FE72C28C6830034EE55 /* TransactionListImages.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		25F55FE82C28C6830034EE55 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FE92C28C6830034EE55 /* TransactionListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		25F55FEA2C28C6830034EE55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FEB2C28C6830034EE55 /* TransactionListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25F55FEC2C28C6830034EE55 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FED2C28C6830034EE55 /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25F55FFE2C28C6BE0034EE55 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FFF2C28C6BE0034EE55 /* TransactionDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		25F560002C28C6BE0034EE55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25F560012C28C6BE0034EE55 /* Strings */,
+				25F560042C28C6BE0034EE55 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25F560012C28C6BE0034EE55 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				25F560022C28C6BE0034EE55 /* TransactionDetail.strings */,
+				25F560032C28C6BE0034EE55 /* TransactionDetailStrings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		25F560042C28C6BE0034EE55 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				25F560052C28C6BE0034EE55 /* TransactionDetailImages.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		25F560062C28C6BE0034EE55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25F560072C28C6BE0034EE55 /* TransactionDetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25F560082C28C6BE0034EE55 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25F560092C28C6BE0034EE55 /* TransactionDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25F560102C28C75A0034EE55 /* CoraSession */ = {
+			isa = PBXGroup;
+			children = (
+				25F560112C28C7720034EE55 /* CoraSession.swift */,
+			);
+			path = CoraSession;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -635,6 +794,8 @@
 				25F55FC72C2794BC0034EE55 /* Password.strings in Resources */,
 				25E213AB2C1915C50045D685 /* LaunchScreen.storyboard in Resources */,
 				25F55F9E2C2762E30034EE55 /* SignIn.strings in Resources */,
+				25F5600B2C28C6BE0034EE55 /* TransactionDetail.strings in Resources */,
+				25F55FEE2C28C6830034EE55 /* TransactionList.strings in Resources */,
 				25E213A82C1915C50045D685 /* Assets.xcassets in Resources */,
 				25F55F652C2655A40034EE55 /* Home.strings in Resources */,
 			);
@@ -663,19 +824,24 @@
 			files = (
 				25F55FA22C2769A80034EE55 /* CoraNavigationStylable.swift in Sources */,
 				25F55F632C2654F10034EE55 /* Localize.swift in Sources */,
+				25F5600F2C28C6BE0034EE55 /* TransactionDetailViewModel.swift in Sources */,
 				25F55FA72C277E030034EE55 /* GlobalImages.swift in Sources */,
 				25F55FC52C2794BC0034EE55 /* PasswordViewModel.swift in Sources */,
 				25E213A32C1915C10045D685 /* ViewController.swift in Sources */,
 				255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */,
 				25F55FCE2C27A7500034EE55 /* UIView+Extensions.swift in Sources */,
+				25F5600D2C28C6BE0034EE55 /* TransactionDetailImages.swift in Sources */,
+				25F5600C2C28C6BE0034EE55 /* TransactionDetailStrings.swift in Sources */,
 				25F55FC92C2794BC0034EE55 /* PasswordImages.swift in Sources */,
 				25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */,
 				25F55F9C2C2762E30034EE55 /* SignInViewModel.swift in Sources */,
+				25F55FEF2C28C6830034EE55 /* TransactionListStrings.swift in Sources */,
 				25F55FCC2C27A44F0034EE55 /* CoraTextField.swift in Sources */,
 				25F55FCA2C2794BC0034EE55 /* PasswordRouter.swift in Sources */,
 				25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */,
 				25F55FC82C2794BC0034EE55 /* PasswordStrings.swift in Sources */,
 				25F55FAF2C2787520034EE55 /* CPFMask.swift in Sources */,
+				25F55FF02C28C6830034EE55 /* TransactionListImages.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
@@ -683,14 +849,20 @@
 				25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
+				25F55FF32C28C6830034EE55 /* TransactionListViewModel.swift in Sources */,
 				25F55FD52C289B2F0034EE55 /* ListService.swift in Sources */,
 				25F55FD12C289AE20034EE55 /* NetworkService.swift in Sources */,
 				25F55FC62C2794BC0034EE55 /* PasswordViewController.swift in Sources */,
 				25F55F6A2C27604B0034EE55 /* HomeRouter.swift in Sources */,
+				25F5600E2C28C6BE0034EE55 /* TransactionDetailViewController.swift in Sources */,
 				25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */,
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
+				25F55FF22C28C6830034EE55 /* TransactionListViewController.swift in Sources */,
 				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,
+				25F560122C28C7720034EE55 /* CoraSession.swift in Sources */,
+				25F5600A2C28C6BE0034EE55 /* TransactionDetailRouter.swift in Sources */,
+				25F55FF12C28C6830034EE55 /* TransactionListRouter.swift in Sources */,
 				25F55FA92C2784EB0034EE55 /* String+Extensions.swift in Sources */,
 				25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */,
 				25F55FD32C289B080034EE55 /* AuthService.swift in Sources */,

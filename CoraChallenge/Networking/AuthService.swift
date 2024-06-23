@@ -16,7 +16,7 @@ final class AuthService: AuthServiceProtocol {
     private let networkService: NetworkServiceProtocol
     private let apiKey: String
 
-    init(networkService: NetworkServiceProtocol, apiKey: String) {
+    init(networkService: NetworkServiceProtocol = NetworkService(), apiKey: String = "c603c3e487c4def90aa3816b5525d8d4") {
         self.networkService = networkService
         self.apiKey = apiKey
     }
@@ -25,7 +25,10 @@ final class AuthService: AuthServiceProtocol {
         let body = ["cpf": cpf, "password": password]
         let bodyData = try? JSONSerialization.data(withJSONObject: body)
 
-        let headers = ["apikey": apiKey]
+        let headers = [
+                    "apikey": apiKey,
+                    "Content-Type": "application/json"
+                ]
 
         let result: Result<AuthResponse, NetworkError> = await networkService.request(endpoint: .login, headers: headers, body: bodyData)
 
