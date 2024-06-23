@@ -53,11 +53,8 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
     }()
     
 #warning("pode fazer um CoraTextField")
-    private lazy var cpfTextField: UITextField = {
-        let textField = UITextField()
-        textField.keyboardType = .numberPad
-        textField.textColor = Colors.Neutral.black.color
-        textField.font = .bold(.title2)
+    private lazy var cpfTextField: CoraTextField = {
+        let textField = CoraTextField()
         textField.delegate = self
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField

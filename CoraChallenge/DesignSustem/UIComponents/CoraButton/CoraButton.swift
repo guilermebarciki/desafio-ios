@@ -22,8 +22,7 @@ final class CoraButton: UIButton {
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: CoraButtonMetrics.Icon.size).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: CoraButtonMetrics.Icon.size).isActive = true
+        imageView.setSize(CoraButtonMetrics.Icon.size)
         return imageView
     }()
     
