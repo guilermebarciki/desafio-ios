@@ -49,6 +49,10 @@
 		25F55FCA2C2794BC0034EE55 /* PasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FC42C2794BC0034EE55 /* PasswordRouter.swift */; };
 		25F55FCC2C27A44F0034EE55 /* CoraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FCB2C27A44F0034EE55 /* CoraTextField.swift */; };
 		25F55FCE2C27A7500034EE55 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FCD2C27A7500034EE55 /* UIView+Extensions.swift */; };
+		25F55FD12C289AE20034EE55 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD02C289AE20034EE55 /* NetworkService.swift */; };
+		25F55FD32C289B080034EE55 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD22C289B080034EE55 /* AuthService.swift */; };
+		25F55FD52C289B2F0034EE55 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD42C289B2F0034EE55 /* ListService.swift */; };
+		25F55FD72C289BA20034EE55 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD62C289BA20034EE55 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +119,10 @@
 		25F55FC42C2794BC0034EE55 /* PasswordRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRouter.swift; sourceTree = "<group>"; };
 		25F55FCB2C27A44F0034EE55 /* CoraTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraTextField.swift; sourceTree = "<group>"; };
 		25F55FCD2C27A7500034EE55 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		25F55FD02C289AE20034EE55 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		25F55FD22C289B080034EE55 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		25F55FD42C289B2F0034EE55 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
+		25F55FD62C289BA20034EE55 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,7 @@
 		25E2139D2C1915C10045D685 /* CoraChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				25F55FCF2C2893B40034EE55 /* Networking */,
 				25F55F602C2654D00034EE55 /* Essentials */,
 				255BFB942C1A2CDB00909DF8 /* DesignSystem */,
 				25E213DB2C1926FC0045D685 /* Assets */,
@@ -506,6 +515,17 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		25F55FCF2C2893B40034EE55 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				25F55FD02C289AE20034EE55 /* NetworkService.swift */,
+				25F55FD22C289B080034EE55 /* AuthService.swift */,
+				25F55FD42C289B2F0034EE55 /* ListService.swift */,
+				25F55FD62C289BA20034EE55 /* APIService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -663,6 +683,8 @@
 				25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
+				25F55FD52C289B2F0034EE55 /* ListService.swift in Sources */,
+				25F55FD12C289AE20034EE55 /* NetworkService.swift in Sources */,
 				25F55FC62C2794BC0034EE55 /* PasswordViewController.swift in Sources */,
 				25F55F6A2C27604B0034EE55 /* HomeRouter.swift in Sources */,
 				25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */,
@@ -671,7 +693,9 @@
 				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,
 				25F55FA92C2784EB0034EE55 /* String+Extensions.swift in Sources */,
 				25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */,
+				25F55FD32C289B080034EE55 /* AuthService.swift in Sources */,
 				25F55F9D2C2762E30034EE55 /* SignInStrings.swift in Sources */,
+				25F55FD72C289BA20034EE55 /* APIService.swift in Sources */,
 				255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
