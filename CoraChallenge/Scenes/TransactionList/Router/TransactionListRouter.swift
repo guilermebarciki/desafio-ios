@@ -1,4 +1,4 @@
-//  
+//
 //  TransactionListRouter.swift
 //  CoraChallenge
 //
@@ -28,20 +28,20 @@ class TransactionListRouter {
 
 extension TransactionListRouter {
     
-    func navigate(with navigationData: TransactionListNavigationData, customAnimation: Bool = true, navigationType: NavigationType = .push, animated: Bool = true, completion: (() -> Void)? = nil) {
-        
+    func navigate(animated: Bool = true) {
         let viewController = TransactionListViewController()
-        viewController.prepareForNavigation(with: navigationData)
         
-        if navigationType == .push {
-            navigationController.pushViewController(viewController, animated: animated)
-        } else {
-            navigationController.present(viewController, animated: animated, completion: completion)
-        }
+        navigationController.pushViewController(viewController, animated: animated)
     }
     
 }
 
 // MARK: - External navigation
 
-extension TransactionListRouter {}
+extension TransactionListRouter {
+    
+    func navigateToTransactionDetail(with navigationData: TransactionDetailNavigationData) {
+        TransactionDetailRouter(with: navigationController).navigate(with: navigationData)
+    }
+    
+}

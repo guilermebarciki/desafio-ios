@@ -177,7 +177,7 @@ extension PasswordViewController: PasswordDelegate {
     func signInSuccess() {
         DispatchQueue.main.async { [weak self] in
             self?.hideLoadingIndicator()
-            self?.displayAlert(title: "deu boa", message: publicToken)
+            self?.router?.navigateToTransactionList()
         }
 
     }

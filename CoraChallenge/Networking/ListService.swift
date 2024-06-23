@@ -12,12 +12,11 @@ protocol BankListServiceProtocol {
     func fetchDetails(id: String, token: String) async -> Result<ItemDetails, NetworkError>
 }
 
-
 final class ListService: BankListServiceProtocol {
     private let networkService: NetworkServiceProtocol
     private let apiKey: String
 
-    init(networkService: NetworkServiceProtocol, apiKey: String) {
+    init(networkService: NetworkServiceProtocol = NetworkService(), apiKey: String = "c603c3e487c4def90aa3816b5525d8d4") {
         self.networkService = networkService
         self.apiKey = apiKey
     }

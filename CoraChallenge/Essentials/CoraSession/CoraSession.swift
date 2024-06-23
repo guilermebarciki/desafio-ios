@@ -24,7 +24,7 @@ final class CoraSession {
     // MARK: - Public Properties
     
     var loginType: LoginType {
-        return token == nil ? .guest : .hard
+        return token == nil ? .logedOut : .logedIn
     }
     
     private(set) var token: String?
@@ -64,5 +64,13 @@ extension CoraSession {
 //        })
         self.token = token
     }
+    
+}
+
+
+public enum LoginType {
+    
+    case logedIn
+    case logedOut
     
 }

@@ -39,4 +39,10 @@ extension PasswordRouter {
 
 // MARK: - External navigation
 
-extension PasswordRouter {}
+extension PasswordRouter {
+    
+    func navigateToTransactionList() {
+        TransactionListRouter(with: navigationController).navigate()
+    }
+    
+}
