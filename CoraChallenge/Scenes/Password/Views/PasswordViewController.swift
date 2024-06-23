@@ -71,7 +71,6 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
         
         setupInterface()
         setupConstraints()
-        applyNavigationStyle()
         dismissKeyboardWhenTappedOutside()
     }
     

@@ -15,9 +15,7 @@ protocol PasswordDelegate: AnyObject {
 
 typealias PasswordNavigationData = String
 
-
 class PasswordViewModel {
-    
     
     // MARK: - Properties
     
@@ -25,18 +23,15 @@ class PasswordViewModel {
     private var cpf: String?
     
     weak var delegate: PasswordDelegate?
-    private let authService: AuthServiceProtocol
-    
+    private let worker: LoginWorkerProtocol
     
     // MARK: - Init
     
-    init(delegate: PasswordDelegate?, authService: AuthServiceProtocol = AuthService()) {
+    init(delegate: PasswordDelegate?, worker: LoginWorkerProtocol = LoginWorker()) {
         self.delegate = delegate
-        self.authService = authService
+        self.worker = worker
     }
-    
 }
-
 
 // MARK: - Navigation
 
@@ -45,9 +40,7 @@ extension PasswordViewModel {
     func prepareForNavigation(with navigationData: PasswordNavigationData) {
         self.cpf = navigationData
     }
-    
 }
-
 
 // MARK: - Fetch Methods
 
@@ -63,16 +56,14 @@ extension PasswordViewModel {
             guard let password,
                   let cpf else { return }
             
-            let result = await authService.login(cpf: cpf, password: password)
+            let result = await worker.login(cpf: cpf, password: password)
             
             switch result {
-            case .success(let token):
-                CoraSession.current.setToken(with: token)
+            case .success:
                 delegate?.signInSuccess()
             case .failure(let error):
                 delegate?.signInFail(with: "Falha de Login", and: error.localizedDescription)
             }
         }
     }
-    
 }

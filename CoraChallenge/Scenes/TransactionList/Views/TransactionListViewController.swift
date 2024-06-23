@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionListViewController: UIViewController {
+class TransactionListViewController: UIViewController, CoraNavigationStylable {
     
     
     // MARK: - Properties
@@ -24,9 +24,10 @@ class TransactionListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         setupInterface()
         setupConstraints()
+        applyNavigationStyle()
+        viewModel.fetchTransactionList()
     }
     
 }
@@ -36,7 +37,10 @@ class TransactionListViewController: UIViewController {
 
 extension TransactionListViewController {
     
-    private func setupInterface() {}
+    private func setupInterface() {
+        title = "Extrato"
+        view.backgroundColor = .red
+    }
     
     private func setupConstraints() {}
     

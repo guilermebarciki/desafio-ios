@@ -16,13 +16,16 @@ class TransactionListViewModel {
     
     // MARK: - Properties
     
+    private var worker: TransactionListWorkerProtocol
     weak var delegate: TransactionListDelegate?
+    
     
     
     // MARK: - Init
     
-    init(delegate: TransactionListDelegate?) {
+    init(delegate: TransactionListDelegate?, worker: TransactionListWorkerProtocol = TransactionListWorker()) {
         self.delegate = delegate
+        self.worker = worker
     }
     
 }
@@ -39,4 +42,24 @@ extension TransactionListViewModel {
 
 // MARK: - Fetch Methods
 
-extension TransactionListViewModel {}
+extension TransactionListViewModel {
+    
+    func fetchTransactionList() {
+        Task {
+            let result = await worker.fetchList()
+            
+            switch result {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
+    
+}
+
+
+// MARK: - Public Methods
+
+extension TransactionListViewModel { }

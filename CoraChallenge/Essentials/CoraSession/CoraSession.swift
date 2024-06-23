@@ -74,3 +74,22 @@ public enum LoginType {
     case logedOut
     
 }
+
+
+
+protocol TokenStorageProtocol {
+    func getToken() -> String?
+    func saveToken(_ token: String)
+}
+
+final class TokenStorage: TokenStorageProtocol {
+    private var token: String?
+
+    func getToken() -> String? {
+        return token
+    }
+
+    func saveToken(_ token: String) {
+        self.token = token
+    }
+}

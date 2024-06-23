@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol BankListServiceProtocol {
-    func fetchList(token: String) async -> Result<[ListItem], NetworkError>
+protocol BankServiceProtocol {
+    func fetchList(token: String) async -> Result<[ListResult], NetworkError>
     func fetchDetails(id: String, token: String) async -> Result<ItemDetails, NetworkError>
 }
 
-final class ListService: BankListServiceProtocol {
+final class BankService: BankServiceProtocol {
     private let networkService: NetworkServiceProtocol
     private let apiKey: String
 
@@ -21,7 +21,7 @@ final class ListService: BankListServiceProtocol {
         self.apiKey = apiKey
     }
 
-    func fetchList(token: String) async -> Result<[ListItem], NetworkError> {
+    func fetchList(token: String) async -> Result<[ListResult], NetworkError> {
         let headers = ["apikey": apiKey, "token": token]
 
         let result: Result<ListResponse, NetworkError> = await networkService.request(endpoint: .fetchList, headers: headers, body: nil)
@@ -48,11 +48,7 @@ final class ListService: BankListServiceProtocol {
     }
 }
 
-struct ListResponse: Decodable {
-    let results: [ListItem]
-}
-
-struct ListItem: Decodable {
+struct TransactionItem: Decodable {
     let id: String
     let description: String
     let label: String
@@ -61,6 +57,16 @@ struct ListItem: Decodable {
     let name: String
     let dateEvent: String
     let status: String
+}
+
+struct ListResult: Decodable {
+    let items: [TransactionItem]
+    let date: String
+}
+
+struct ListResponse: Decodable {
+    let results: [ListResult]
+    let itemsTotal: Int
 }
 
 struct ItemDetails: Decodable {
