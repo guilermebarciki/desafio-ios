@@ -41,7 +41,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
         return button
     }()
     
-    private lazy var loginButton: CoraButton = {
+    private lazy var signInButton: CoraButton = {
         let button = CoraButton(
             title: "Próximo",
             size: .regular,
@@ -49,7 +49,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
             icon: GlobalImages.Icons.next.getImage(),
             isActive: false,
             action: { [weak self] in
-//                self?.login()
+                self?.viewModel.signIn()
             }
         )
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -99,7 +99,7 @@ extension PasswordViewController {
         view.addSubview(instructionLabel)
         view.addSubview(passwordTextField)
         view.addSubview(forgotPasswordButton)
-        view.addSubview(loginButton)
+        view.addSubview(signInButton)
     }
     
     private func setupConstraints() {
@@ -123,10 +123,10 @@ extension PasswordViewController {
         ])
         
         NSLayoutConstraint.activate([
-            loginButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -GlobalMetrics.Padding.big),
-            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+            signInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -GlobalMetrics.Padding.big),
+            signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,
                                                        constant: -GlobalMetrics.Padding.regular),
-            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+            signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                       constant: GlobalMetrics.Padding.regular)
         ])
         
@@ -165,22 +165,27 @@ extension PasswordViewController {}
 
 // MARK: - PasswordDelegate
 
-extension PasswordViewController: PasswordDelegate {}
+extension PasswordViewController: PasswordDelegate {
+    
+    func signInSuccess() {
+        //route to list
+    }
+    
+    func signInFail(with title: String, and message: String) {
+        displayAlert(title: title, message: message)
+    }
+    
+    func updateLoginButtonState(isActive: Bool) {
+        signInButton.setActive(isActive)
+    }
+}
 
 
 // MARK: - UITextFieldDelegate
 
 extension PasswordViewController: UITextFieldDelegate {
     
-    func textField(
-        _ textField: UITextField,
-        shouldChangeCharactersIn range: NSRange,
-        replacementString string: String
-    ) -> Bool {
-        return CPFMask().shouldChangeCharactersIn(textField, range: range, replacementString: string)
-    }
-    
     func textFieldDidChangeSelection(_ textField: UITextField) {
-//        viewModel.validateCPF(textField.text)
+        viewModel.validatePassword(textField.text ?? String())
     }
 }

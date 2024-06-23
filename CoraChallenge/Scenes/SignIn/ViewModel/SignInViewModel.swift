@@ -1,4 +1,4 @@
-//  
+//
 //  SignInViewModel.swift
 //  CoraChallenge
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SignInDelegate: AnyObject {
-    func updateButtonState(isActive: Bool)
+    func updateNavigationButtonState(isActive: Bool)
 }
 
 typealias SignInNavigationData = Any
@@ -37,35 +37,35 @@ extension SignInViewModel {
     
     
 }
-    
+
 
 // MARK: - Public Methods
 
 extension SignInViewModel {
-   
+    
     func validateCPF(_ value: String?) {
-            guard let cpf = value?.trimmingCharacters(in: .whitespacesAndNewlines).stringWithNumbersOnly(),
-                  !cpf.isEmpty,
-                  cpf.isValidCPF() else {
-                invalidateCPF()
-                return
-            }
-            storeValidCPF(cpf)
+        guard let cpf = value?.trimmingCharacters(in: .whitespacesAndNewlines).stringWithNumbersOnly(),
+              !cpf.isEmpty,
+              cpf.isValidCPF() else {
+            invalidateCPF()
+            return
         }
+        storeValidCPF(cpf)
+    }
     
     func getCPF() -> String? {
         return cpf
     }
-        
-        private func storeValidCPF(_ cpf: String) {
-            self.cpf = cpf
-            delegate?.updateButtonState(isActive: true)
-        }
-        
-        private func invalidateCPF() {
-            self.cpf = nil
-            delegate?.updateButtonState(isActive: false)
-        }
+    
+    private func storeValidCPF(_ cpf: String) {
+        self.cpf = cpf
+        delegate?.updateNavigationButtonState(isActive: true)
+    }
+    
+    private func invalidateCPF() {
+        self.cpf = nil
+        delegate?.updateNavigationButtonState(isActive: false)
+    }
     
     
 }

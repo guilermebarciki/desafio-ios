@@ -150,8 +150,8 @@ extension SignInViewController {
 // MARK: - SignInDelegate
 
 extension SignInViewController: SignInDelegate {
-    func updateButtonState(isActive: Bool) {
-        self.navigationButton.setActive(isActive)
+    func updateNavigationButtonState(isActive: Bool) {
+        navigationButton.setActive(isActive)
     }
 }
 

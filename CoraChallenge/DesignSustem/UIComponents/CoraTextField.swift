@@ -43,8 +43,9 @@ final class CoraTextField: UITextField {
         tintColor = Colors.Brand.primary.color
         
         if isPasswordField {
-            self.rightView = togglePasswordButton
-            self.rightViewMode = .always
+            rightView = togglePasswordButton
+            rightViewMode = .always
+            isSecureTextEntry = true
         }
     }
     
