@@ -52,6 +52,10 @@ extension SignInViewModel {
             }
             storeValidCPF(cpf)
         }
+    
+    func getCPF() -> String? {
+        return cpf
+    }
         
         private func storeValidCPF(_ cpf: String) {
             self.cpf = cpf

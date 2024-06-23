@@ -1,5 +1,5 @@
-//
-//  SignInRouter.swift
+//  
+//  PasswordRouter.swift
 //  CoraChallenge
 //
 //  Created by Guilerme Barciki on 22/06/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInRouter {
+class PasswordRouter {
     
     
     // MARK: - Properties
@@ -26,10 +26,12 @@ class SignInRouter {
 
 // MARK: - Self Navigation
 
-extension SignInRouter {
+extension PasswordRouter {
     
-    func navigate(animated: Bool = true) {
-        let viewController = SignInViewController()
+    func navigate(with navigationData: PasswordNavigationData, animated: Bool = true) {
+        let viewController = PasswordViewController()
+        viewController.prepareForNavigation(with: navigationData)
+        
         navigationController.pushViewController(viewController, animated: animated)
     }
     
@@ -37,10 +39,4 @@ extension SignInRouter {
 
 // MARK: - External navigation
 
-extension SignInRouter {
-    
-    func navigateToPassword(with navigationData: PasswordNavigationData) {
-        PasswordRouter(with: navigationController).navigate(with: navigationData)
-    }
-    
-}
+extension PasswordRouter {}

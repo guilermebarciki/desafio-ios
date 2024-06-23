@@ -45,6 +45,7 @@ extension CoraNavigationStylable where Self: UIViewController {
         navigationController.navigationBar.backIndicatorImage = UIImage(named: "chevronLeft")
         navigationController.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "chevronLeft")
         navigationController.navigationBar.backItem?.backButtonTitle = ""
+        navigationController.navigationBar.topItem?.backButtonDisplayMode = .minimal
     }
     
     

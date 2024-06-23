@@ -44,8 +44,8 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
             style: .primary,
             icon: GlobalImages.Icons.next.getImage(),
             isActive: false,
-            action: {
-                print("pressed")
+            action: { [weak self] in
+                self?.navigateToPassword()
             }
         )
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -141,7 +141,13 @@ extension SignInViewController {}
 
 // MARK: - Actions
 
-extension SignInViewController {}
+extension SignInViewController {
+    
+    private func navigateToPassword() {
+        guard let cpf = viewModel.getCPF() else { return }
+        router?.navigateToPassword(with: cpf)
+    }
+}
 
 
 // MARK: - SignInDelegate
