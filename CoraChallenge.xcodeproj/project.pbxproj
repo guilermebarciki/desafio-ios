@@ -150,7 +150,7 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		255BFB942C1A2CDB00909DF8 /* DesignSustem */ = {
+		255BFB942C1A2CDB00909DF8 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
 				25BCD7462C206251000FE3D2 /* Resources */,
@@ -159,7 +159,7 @@
 				255BFB9A2C1A306600909DF8 /* Colors.swift */,
 				25F55F5B2C264C780034EE55 /* Fonts.swift */,
 			);
-			path = DesignSustem;
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		255BFB952C1A2CE600909DF8 /* Metrics */ = {
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				25F55F602C2654D00034EE55 /* Essentials */,
-				255BFB942C1A2CDB00909DF8 /* DesignSustem */,
+				255BFB942C1A2CDB00909DF8 /* DesignSystem */,
 				25E213DB2C1926FC0045D685 /* Assets */,
 				25E213CF2C1916CF0045D685 /* Scenes */,
 				25E213CE2C19168C0045D685 /* Supporting Files */,
