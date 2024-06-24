@@ -174,10 +174,8 @@ extension TransactionListViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UILabel()
-        view.backgroundColor = .green
-        view.text = viewModel.getTransactionDateFill(for: section)?.formattedDate
-        print(viewModel.getTransactionDateFill(for: section)?.formattedDate)
+        let fill = viewModel.getTransactionDateFill(for: section)
+        let view = DateHeaderView(fill: fill)
         return view
     }
     
