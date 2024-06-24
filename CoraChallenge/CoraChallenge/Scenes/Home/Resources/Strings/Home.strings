@@ -1,0 +1,12 @@
+/* 
+  Home.strings
+  CoraChallenge
+
+  Created by Guilerme Barciki on 21/06/24.
+  
+*/
+
+"title" = "Conta Digital PJ\nPoderosamente simples";
+"description" = "Sua empresa livre burocracias e de taxas para gerar boletos, fazer transferências e pagamentos.";
+"signinButton" = "Já sou cliente";
+"signupButton" = "Quero fazer parte!";

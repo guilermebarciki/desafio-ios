@@ -1,0 +1,40 @@
+//
+//  SceneDelegate.swift
+//  CoraChallenge
+//
+//  Created by Guilerme Barciki on 11/06/24.
+//
+
+import UIKit
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = .init(windowScene: windowScene)
+        window?.makeKeyAndVisible()
+        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        window?.rootViewController = navigationController
+    }
+
+    func sceneDidDisconnect(_ scene: UIScene) {
+    }
+
+    func sceneDidBecomeActive(_ scene: UIScene) {
+    }
+
+    func sceneWillResignActive(_ scene: UIScene) {
+    }
+
+    func sceneWillEnterForeground(_ scene: UIScene) {
+    }
+
+    func sceneDidEnterBackground(_ scene: UIScene) {
+    }
+
+
+}
+
