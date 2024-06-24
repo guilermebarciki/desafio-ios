@@ -9,7 +9,7 @@ import Foundation
 
 protocol TransactionDetailDelegate: AnyObject {}
 
-typealias TransactionDetailNavigationData = Any
+typealias TransactionDetailNavigationData = String
 
 class TransactionDetailViewModel {
     

@@ -10,6 +10,8 @@ import Foundation
 protocol TransactionListDelegate: AnyObject {
     
     func updateView()
+    func startLoading()
+    func stopLoading()
     
 }
 
@@ -50,6 +52,8 @@ extension TransactionListViewModel {
 extension TransactionListViewModel {
     
     func fetchTransactionList() {
+        defer { delegate?.stopLoading() }
+        delegate?.startLoading()
         Task {
             let result = await worker.fetchList()
             
@@ -114,6 +118,15 @@ extension TransactionListViewModel {
             let filteredItems = transactionItems.items.filter { $0.entry == type }
             return filteredItems.isEmpty ? nil : ListResult(items: filteredItems, date: transactionItems.date)
         }
+    }
+    
+    func getTransactionDetailNavigationData(at indexPath: IndexPath) -> TransactionDetailNavigationData? {
+        guard let sectionItem = filteredTransactions.safeFind(at: indexPath.section),
+              let transactionItem = sectionItem.items.safeFind(at: indexPath.row)
+        else {
+            return nil
+        }
+        return transactionItem.id
     }
     
 }

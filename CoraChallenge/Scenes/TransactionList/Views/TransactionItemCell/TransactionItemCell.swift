@@ -87,6 +87,7 @@ extension TransactionItemTableViewCell {
     
     private func setupInterface() {
         contentView.addSubview(mainStackView)
+        selectionStyle = .none
     }
     
     private func setupConstraints() {

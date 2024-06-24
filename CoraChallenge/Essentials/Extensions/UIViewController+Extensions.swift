@@ -30,19 +30,28 @@ extension UIViewController {
 }
 
 
+private var activityIndicatorAssociationKey: UInt8 = 0
+
 extension UIViewController {
-   
-    private struct LoadingIndicator {
-        static var activityIndicator: UIActivityIndicatorView?
+    
+    private var activityIndicator: UIActivityIndicatorView {
+        get {
+            if let indicator = objc_getAssociatedObject(self, &activityIndicatorAssociationKey) as? UIActivityIndicatorView {
+                return indicator
+            }
+            let indicator = UIActivityIndicatorView(style: .large)
+            indicator.translatesAutoresizingMaskIntoConstraints = false
+            indicator.hidesWhenStopped = true
+            objc_setAssociatedObject(self, &activityIndicatorAssociationKey, indicator, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            return indicator
+        }
+        set {
+            objc_setAssociatedObject(self, &activityIndicatorAssociationKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
     func showLoadingIndicator() {
-        if LoadingIndicator.activityIndicator == nil {
-            let activityIndicator = UIActivityIndicatorView(style: .large)
-            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-            activityIndicator.hidesWhenStopped = true
-            LoadingIndicator.activityIndicator = activityIndicator
-            
+        if activityIndicator.superview == nil {
             view.addSubview(activityIndicator)
             NSLayoutConstraint.activate([
                 activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -51,14 +60,14 @@ extension UIViewController {
         }
         
         DispatchQueue.main.async {
-            LoadingIndicator.activityIndicator?.startAnimating()
+            self.activityIndicator.startAnimating()
         }
     }
     
     func hideLoadingIndicator() {
         DispatchQueue.main.async {
-            LoadingIndicator.activityIndicator?.stopAnimating()
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.removeFromSuperview()
         }
     }
-    
 }

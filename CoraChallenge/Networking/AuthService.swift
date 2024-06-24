@@ -25,7 +25,7 @@ final class AuthService: AuthServiceProtocol {
     
     private lazy var refreshTimer: DispatchSourceTimer = {
         let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
-        timer.schedule(deadline: .now() + 10, repeating: 10)
+        timer.schedule(deadline: .now() + 60, repeating: 60)
         timer.setEventHandler { [weak self] in
             self?.handleTokenRefresh()
         }

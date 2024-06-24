@@ -71,9 +71,15 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
         setupInterface()
         setupConstraints()
         applyNavigationStyle()
-        viewModel.fetchTransactionList()
         setupTableView()
+        
         //setrightbuttonbar
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.fetchTransactionList()
+//        startLoading()
     }
     
 }
@@ -128,9 +134,11 @@ extension TransactionListViewController {
 
 extension TransactionListViewController {
     
-    @objc private func segmentChanged(_ sender: UISegmentedControl) {
-        // Atualizar a exibição com base no segmento selecionado
-        print("Segment changed to index: \(sender.selectedSegmentIndex)")
+    private func transactionSelected(at indexPath: IndexPath) {
+        guard let navigationData = viewModel.getTransactionDetailNavigationData(at: indexPath) else {
+            return
+        }
+        router?.navigateToTransactionDetail(with: navigationData)
     }
     
 }
@@ -149,6 +157,18 @@ extension TransactionListViewController {}
 // MARK: - TransactionListDelegate
 
 extension TransactionListViewController: TransactionListDelegate {
+    func startLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.showLoadingIndicator()
+        }
+    }
+    
+    func stopLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.hideLoadingIndicator()
+        }
+    }
+    
     func updateView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -177,7 +197,7 @@ extension TransactionListViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        return //interactor.didSelectTransaction(section: indexPath.section, at: indexPath.row)
+        return transactionSelected(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
