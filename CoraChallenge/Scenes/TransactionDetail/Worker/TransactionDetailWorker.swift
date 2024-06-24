@@ -6,15 +6,15 @@
 //
 
 
-protocol FetchDetailsWorkerProtocol {
+protocol TransactionDetailsWorkerProtocol {
     func fetchDetail(id: String) async -> Result<ItemDetails, NetworkError>
 }
 
-final class FetchDetailsWorker: FetchDetailsWorkerProtocol {
+final class TransactionDetailsWorker: TransactionDetailsWorkerProtocol {
     private let bankService: BankServiceProtocol
     private var tokenStorage: TokenStorageProtocol
 
-    init(bankService: BankServiceProtocol, tokenStorage: TokenStorageProtocol) {
+    init(bankService: BankServiceProtocol = BankService(), tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
         self.bankService = bankService
         self.tokenStorage = tokenStorage
     }

@@ -13,13 +13,15 @@ final class TransactionDetailHeaderView: UIView {
         let imageView = UIImageView()
         imageView.tintColor = Colors.Neutral.black.color
         imageView.setSize(24)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.Neutral.black.color
-        label.font = .bold(.title2)
+        label.font = .bold(.body1)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -28,6 +30,7 @@ final class TransactionDetailHeaderView: UIView {
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = GlobalMetrics.Padding.small
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -42,8 +45,7 @@ final class TransactionDetailHeaderView: UIView {
     }
     
     private func setupInterface() {
-        addSubview(iconImage)
-        addSubview(titleLabel)
+        addSubview(stackView)
     }
     
     private func setupConstraints() {
@@ -55,9 +57,8 @@ final class TransactionDetailHeaderView: UIView {
         ])
     }
     
-    func fill(icon: UIImage, title: String){
+    func fill(icon: UIImage, title: String) {
         iconImage.image = icon
         titleLabel.text = title
     }
-    
 }

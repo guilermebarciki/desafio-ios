@@ -22,7 +22,7 @@ class TransactionListViewModel {
     
     // MARK: - Properties
     
-    private var worker: TransactionListWorkerProtocol
+    private let worker: TransactionListWorkerProtocol
     weak var delegate: TransactionListDelegate?
     
     private var transactions: [ListResult] = []
@@ -127,7 +127,7 @@ extension TransactionListViewModel {
         else {
             return nil
         }
-        return transactionItem.id
+        return (transactionItem.id, transactionItem.entry)
     }
     
 }

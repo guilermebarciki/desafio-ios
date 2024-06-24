@@ -12,31 +12,34 @@ final class TransactionDetailComponent: UIView {
     private lazy var firstLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.Neutral.black.color
-        label.font = .bold(.title2)
+        label.font = .regular(.body2)
         label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var secondLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.Neutral.black.color
-        label.font = .bold(.title2)
+        label.font = .bold(.body1)
         label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    
-    private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [firstLabel, secondLabel, descriptionStackView])
-        stackView.axis = .vertical
-        stackView.spacing = 4
-        return stackView
     }()
     
     private lazy var descriptionStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 0
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [firstLabel, secondLabel, descriptionStackView])
+        stackView.axis = .vertical
+        stackView.spacing = 4
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -63,30 +66,33 @@ final class TransactionDetailComponent: UIView {
         ])
     }
     
-    func fill(firstText: String?, secondText: String?, contentTexts: [String]?) {
-        if let firstText {
+    func fill(firstText: String? = nil, secondText: String? = nil, contentTexts: [String]? = nil) {
+        if let firstText = firstText {
             firstLabel.text = firstText
             firstLabel.isHidden = false
         }
         
-        if let secondText {
+        if let secondText = secondText {
             secondLabel.text = secondText
             secondLabel.isHidden = false
         }
         
         addContent(contentTexts: contentTexts)
+        
+        setNeedsLayout()
+        layoutIfNeeded()
     }
     
     private func addContent(contentTexts: [String]?) {
+        descriptionStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
         contentTexts?.forEach { text in
             let label = UILabel()
             label.font = .regular(.body2)
             label.textColor = Colors.Neutral.gray01.color
             label.text = text
+            label.translatesAutoresizingMaskIntoConstraints = false
             descriptionStackView.addArrangedSubview(label)
         }
-        
     }
-    
 }

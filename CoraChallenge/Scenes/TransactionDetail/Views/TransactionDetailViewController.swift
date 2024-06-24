@@ -1,4 +1,4 @@
-//  
+//
 //  TransactionDetailViewController.swift
 //  CoraChallenge
 //
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionDetailViewController: UIViewController {
+class TransactionDetailViewController: UIViewController, CoraNavigationStylable {
     
     
     // MARK: - Properties
@@ -19,14 +19,89 @@ class TransactionDetailViewController: UIViewController {
         return TransactionDetailRouter(with: navigationController)
     }()
     
+    private lazy var headerView: TransactionDetailHeaderView = {
+        let headerView = TransactionDetailHeaderView()
+        return headerView
+    }()
+    
+    private lazy var valueInfoView: TransactionDetailComponent = {
+        let headerView = TransactionDetailComponent()
+        return headerView
+    }()
+    
+    private lazy var dateInfoView: TransactionDetailComponent = {
+        let headerView = TransactionDetailComponent()
+        return headerView
+    }()
+    
+    private lazy var senderInfoView: TransactionDetailComponent = {
+        let headerView = TransactionDetailComponent()
+        return headerView
+    }()
+    
+    private lazy var recipientInfoView: TransactionDetailComponent = {
+        let headerView = TransactionDetailComponent()
+        return headerView
+    }()
+    
+    private lazy var descriptionInfoView: TransactionDetailComponent = {
+        let headerView = TransactionDetailComponent()
+        return headerView
+    }()
+    
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(
+            arrangedSubviews: [
+                headerView,
+                valueInfoView,
+                dateInfoView,
+                senderInfoView,
+                recipientInfoView,
+                descriptionInfoView
+            ]
+        )
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.spacing = GlobalMetrics.Padding.big
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: GlobalMetrics.Padding.extraLarge,
+                                               left: GlobalMetrics.Padding.big,
+                                               bottom: GlobalMetrics.Padding.big,
+                                               right: GlobalMetrics.Padding.big)
+        return stackView
+    }()
+    
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
+    private lazy var shareButton: CoraButton = {
+        let button = CoraButton(
+            title: HomeStrings.View.signupButton.localized,
+            size: .big,
+            style: .primary,
+            icon: GlobalImages.Icons.next.getImage()
+        )
+        return button
+    }()
+    
     
     // MARK: - View's life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupInterface()
         setupConstraints()
+        viewModel.fetchTransactionDetail()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        applyNavigationStyle()
     }
     
 }
@@ -36,39 +111,80 @@ class TransactionDetailViewController: UIViewController {
 
 extension TransactionDetailViewController {
     
-    private func setupInterface() {}
+    private func setupInterface() {
+        view.backgroundColor = Colors.Neutral.white.color
+        title = "Detalhes da transferência"
+        view.addSubview(scrollView)
+        view.addSubview(shareButton)
+        scrollView.addSubview(stackView)
+        
+    }
     
-    private func setupConstraints() {}
+    private func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: shareButton.topAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            shareButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -GlobalMetrics.Padding.big),
+            shareButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: GlobalMetrics.Padding.big),
+            shareButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+        
+    }
     
 }
 
 
 // MARK: - Navigation
-    
+
 extension TransactionDetailViewController {
     
     func prepareForNavigation(with navigationData: TransactionDetailNavigationData) {
         viewModel.prepareForNavigation(with: navigationData)
     }
- 
+    
 }
 
 
 // MARK: - Private methods
-    
+
 extension TransactionDetailViewController {}
 
 
 // MARK: - Public methods
-    
+
 extension TransactionDetailViewController {}
 
 
 // MARK: - Actions
-    
+
 extension TransactionDetailViewController {}
 
 
 // MARK: - TransactionDetailDelegate
 
-extension TransactionDetailViewController: TransactionDetailDelegate {}
+extension TransactionDetailViewController: TransactionDetailDelegate {
+    func updateView(with fill: TransactionDetailFill) {
+        DispatchQueue.main.async {
+            self.headerView.fill(icon: GlobalImages.Icons.credit.getImage(), title: fill.title)
+            self.valueInfoView.fill(firstText: fill.valueTitle, secondText: fill.value)
+            self.dateInfoView.fill(firstText: fill.dateTitle, secondText: fill.date)
+            self.senderInfoView.fill(firstText: fill.senderTitle, secondText: fill.sender, contentTexts: fill.senderDetails)
+            self.recipientInfoView.fill(firstText: fill.recipientTitle, secondText: fill.recipient, contentTexts: fill.recipientDetails)
+            self.descriptionInfoView.fill(firstText: fill.descriptionTitle, contentTexts: fill.descriptionDetails)
+        }
+    }
+}
