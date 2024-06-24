@@ -53,8 +53,9 @@ extension TransactionListViewModel {
     
     func fetchTransactionList() {
         defer { delegate?.stopLoading() }
-        delegate?.startLoading()
+        
         Task {
+            delegate?.startLoading()
             let result = await worker.fetchList()
             
             switch result {

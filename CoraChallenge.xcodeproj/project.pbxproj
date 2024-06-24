@@ -14,6 +14,8 @@
 		255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BFB9C2C1A354F00909DF8 /* HomeImages.swift */; };
 		2581D2732C29220900D330E8 /* TransactionSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2722C29220900D330E8 /* TransactionSegmentedControl.swift */; };
 		2581D2762C29375800D330E8 /* TransactionSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2752C29375700D330E8 /* TransactionSegment.swift */; };
+		2581D2792C29B55200D330E8 /* TransactionDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2782C29B55200D330E8 /* TransactionDetailHeaderView.swift */; };
+		2581D27B2C29B5C600D330E8 /* TransactionDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D27A2C29B5C600D330E8 /* TransactionDetailComponent.swift */; };
 		25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2139E2C1915C10045D685 /* AppDelegate.swift */; };
 		25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A02C1915C10045D685 /* SceneDelegate.swift */; };
 		25E213A32C1915C10045D685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A22C1915C10045D685 /* ViewController.swift */; };
@@ -104,6 +106,8 @@
 		255BFB9C2C1A354F00909DF8 /* HomeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImages.swift; sourceTree = "<group>"; };
 		2581D2722C29220900D330E8 /* TransactionSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSegmentedControl.swift; sourceTree = "<group>"; };
 		2581D2752C29375700D330E8 /* TransactionSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSegment.swift; sourceTree = "<group>"; };
+		2581D2782C29B55200D330E8 /* TransactionDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailHeaderView.swift; sourceTree = "<group>"; };
+		2581D27A2C29B5C600D330E8 /* TransactionDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailComponent.swift; sourceTree = "<group>"; };
 		25E2139B2C1915C10045D685 /* CoraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2139E2C1915C10045D685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E213A02C1915C10045D685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +244,15 @@
 				2581D2752C29375700D330E8 /* TransactionSegment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2581D2772C29B53600D330E8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2581D2782C29B55200D330E8 /* TransactionDetailHeaderView.swift */,
+				2581D27A2C29B5C600D330E8 /* TransactionDetailComponent.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		25BCD7462C206251000FE3D2 /* Resources */ = {
@@ -711,6 +724,7 @@
 		25F560062C28C6BE0034EE55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2581D2772C29B53600D330E8 /* CustomViews */,
 				25F560072C28C6BE0034EE55 /* TransactionDetailViewController.swift */,
 			);
 			path = Views;
@@ -916,6 +930,7 @@
 				25F5600F2C28C6BE0034EE55 /* TransactionDetailViewModel.swift in Sources */,
 				25F5601E2C28E3C20034EE55 /* TransactionDetailWorker.swift in Sources */,
 				25F55FA72C277E030034EE55 /* GlobalImages.swift in Sources */,
+				2581D2792C29B55200D330E8 /* TransactionDetailHeaderView.swift in Sources */,
 				25F55FC52C2794BC0034EE55 /* PasswordViewModel.swift in Sources */,
 				25E213A32C1915C10045D685 /* ViewController.swift in Sources */,
 				255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */,
@@ -936,6 +951,7 @@
 				25F55FF02C28C6830034EE55 /* TransactionListImages.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
+				2581D27B2C29B5C600D330E8 /* TransactionDetailComponent.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
 				2581D2762C29375800D330E8 /* TransactionSegment.swift in Sources */,
 				25F560202C28E9E50034EE55 /* Array+Extensions.swift in Sources */,

@@ -72,14 +72,8 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
         setupConstraints()
         applyNavigationStyle()
         setupTableView()
-        
-        //setrightbuttonbar
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         viewModel.fetchTransactionList()
-//        startLoading()
+        //setrightbuttonbar
     }
     
 }
