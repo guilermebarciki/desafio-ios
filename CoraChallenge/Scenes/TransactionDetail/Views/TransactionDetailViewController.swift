@@ -84,7 +84,7 @@ class TransactionDetailViewController: UIViewController, CoraNavigationStylable 
             title: HomeStrings.View.signupButton.localized,
             size: .big,
             style: .primary,
-            icon: GlobalImages.Icons.next.getImage()
+            icon: GlobalImages.Icons.share.getImage()
         )
         return button
     }()

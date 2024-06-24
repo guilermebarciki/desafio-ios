@@ -16,6 +16,8 @@
 		2581D2762C29375800D330E8 /* TransactionSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2752C29375700D330E8 /* TransactionSegment.swift */; };
 		2581D2792C29B55200D330E8 /* TransactionDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2782C29B55200D330E8 /* TransactionDetailHeaderView.swift */; };
 		2581D27B2C29B5C600D330E8 /* TransactionDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D27A2C29B5C600D330E8 /* TransactionDetailComponent.swift */; };
+		2581D27D2C29DCD900D330E8 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D27C2C29DCD900D330E8 /* TokenStorage.swift */; };
+		2581D27F2C29DD3800D330E8 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D27E2C29DD3800D330E8 /* KeychainManager.swift */; };
 		25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2139E2C1915C10045D685 /* AppDelegate.swift */; };
 		25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A02C1915C10045D685 /* SceneDelegate.swift */; };
 		25E213A32C1915C10045D685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A22C1915C10045D685 /* ViewController.swift */; };
@@ -56,7 +58,6 @@
 		25F55FD12C289AE20034EE55 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD02C289AE20034EE55 /* NetworkService.swift */; };
 		25F55FD32C289B080034EE55 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD22C289B080034EE55 /* AuthService.swift */; };
 		25F55FD52C289B2F0034EE55 /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD42C289B2F0034EE55 /* BankService.swift */; };
-		25F55FD72C289BA20034EE55 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FD62C289BA20034EE55 /* APIService.swift */; };
 		25F55FEE2C28C6830034EE55 /* TransactionList.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F55FE42C28C6830034EE55 /* TransactionList.strings */; };
 		25F55FEF2C28C6830034EE55 /* TransactionListStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FE52C28C6830034EE55 /* TransactionListStrings.swift */; };
 		25F55FF02C28C6830034EE55 /* TransactionListImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F55FE72C28C6830034EE55 /* TransactionListImages.swift */; };
@@ -108,6 +109,8 @@
 		2581D2752C29375700D330E8 /* TransactionSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSegment.swift; sourceTree = "<group>"; };
 		2581D2782C29B55200D330E8 /* TransactionDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailHeaderView.swift; sourceTree = "<group>"; };
 		2581D27A2C29B5C600D330E8 /* TransactionDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailComponent.swift; sourceTree = "<group>"; };
+		2581D27C2C29DCD900D330E8 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		2581D27E2C29DD3800D330E8 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		25E2139B2C1915C10045D685 /* CoraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2139E2C1915C10045D685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E213A02C1915C10045D685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +155,6 @@
 		25F55FD02C289AE20034EE55 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		25F55FD22C289B080034EE55 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		25F55FD42C289B2F0034EE55 /* BankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
-		25F55FD62C289BA20034EE55 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		25F55FE42C28C6830034EE55 /* TransactionList.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TransactionList.strings; sourceTree = "<group>"; };
 		25F55FE52C28C6830034EE55 /* TransactionListStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListStrings.swift; sourceTree = "<group>"; };
 		25F55FE72C28C6830034EE55 /* TransactionListImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListImages.swift; sourceTree = "<group>"; };
@@ -420,7 +422,7 @@
 		25F55F602C2654D00034EE55 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
-				25F560102C28C75A0034EE55 /* CoraSession */,
+				25F560102C28C75A0034EE55 /* Managers */,
 				25F55FAC2C27873F0034EE55 /* Common */,
 				25F55FA32C277B0F0034EE55 /* Extensions */,
 				25F55F612C2654E10034EE55 /* Protocols */,
@@ -604,7 +606,6 @@
 				25F55FD02C289AE20034EE55 /* NetworkService.swift */,
 				25F55FD22C289B080034EE55 /* AuthService.swift */,
 				25F55FD42C289B2F0034EE55 /* BankService.swift */,
-				25F55FD62C289BA20034EE55 /* APIService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -738,12 +739,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		25F560102C28C75A0034EE55 /* CoraSession */ = {
+		25F560102C28C75A0034EE55 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				25F560112C28C7720034EE55 /* CoraSession.swift */,
+				2581D27C2C29DCD900D330E8 /* TokenStorage.swift */,
+				2581D27E2C29DD3800D330E8 /* KeychainManager.swift */,
 			);
-			path = CoraSession;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		25F560162C28E0560034EE55 /* Worker */ = {
@@ -960,7 +963,9 @@
 				25F560292C28F3CF0034EE55 /* DateHeaderView.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
+				2581D27D2C29DCD900D330E8 /* TokenStorage.swift in Sources */,
 				25F55FF32C28C6830034EE55 /* TransactionListViewModel.swift in Sources */,
+				2581D27F2C29DD3800D330E8 /* KeychainManager.swift in Sources */,
 				25F560182C28E0660034EE55 /* LoginUseCase.swift in Sources */,
 				25F55FD52C289B2F0034EE55 /* BankService.swift in Sources */,
 				25F55FD12C289AE20034EE55 /* NetworkService.swift in Sources */,
@@ -983,7 +988,6 @@
 				25F55F9F2C2762E30034EE55 /* SignInImages.swift in Sources */,
 				25F55FD32C289B080034EE55 /* AuthService.swift in Sources */,
 				25F55F9D2C2762E30034EE55 /* SignInStrings.swift in Sources */,
-				25F55FD72C289BA20034EE55 /* APIService.swift in Sources */,
 				255BFB972C1A2CF100909DF8 /* GlobalMetrics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,8 @@ final class GlobalImages {
         case filter = "ic_filter"
         case credit = "ic_arrow-down-in"
         case debit = "ic_arrow-up-out"
+        case share = "ic_share-ios"
+        case gignOut = "sign-out"
         
         func getImage() -> UIImage {
             return UIImage(named: self.rawValue) ?? UIImage()

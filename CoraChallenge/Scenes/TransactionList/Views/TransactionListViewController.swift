@@ -73,7 +73,6 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
         applyNavigationStyle()
         setupTableView()
         viewModel.fetchTransactionList()
-        //setrightbuttonbar
     }
     
 }
