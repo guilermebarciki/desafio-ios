@@ -20,7 +20,7 @@ final class FetchDetailsWorker: FetchDetailsWorkerProtocol {
     }
 
     func fetchDetail(id: String) async -> Result<ItemDetails, NetworkError> {
-        guard let currentToken = tokenStorage.getToken() else { return .failure(.unauthorized) }
+        guard let currentToken = await tokenStorage.getToken() else { return .failure(.unauthorized) }
         return await bankService.fetchDetails(id: id, token: currentToken)
     }
 }

@@ -9,13 +9,14 @@ import Foundation
 
 protocol LoginWorkerProtocol {
     func login(cpf: String, password: String) async -> Result<Void, NetworkError>
+    func cleanToken() 
 }
 
 final class LoginWorker: LoginWorkerProtocol {
     private let authService: AuthServiceProtocol
     private var tokenStorage: TokenStorageProtocol
 
-    init(authService: AuthServiceProtocol = AuthService(), tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
+    init(authService: AuthServiceProtocol = AuthService.shared, tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
         self.authService = authService
         self.tokenStorage = tokenStorage
     }
@@ -29,5 +30,9 @@ final class LoginWorker: LoginWorkerProtocol {
         case .failure(let error):
             return .failure(error)
         }
+    }
+    
+    func cleanToken() {
+        tokenStorage.saveToken("")
     }
 }

@@ -78,22 +78,42 @@ public enum LoginType {
 
 
 protocol TokenStorageProtocol {
-    func getToken() -> String?
+    func getToken() async -> String?
     func saveToken(_ token: String)
+    func setRefreshing(_ refreshing: Bool)
 }
 
 final class TokenStorage: TokenStorageProtocol {
     static let shared = TokenStorage()
     
     private var token: String?
+    private var isRefreshing = false
+    private let queue = DispatchQueue(label: "com.tokenStorage.queue")
     
     private init() { }
     
-    func getToken() -> String? {
-        return token
+    func getToken() async -> String? {
+        await withCheckedContinuation { continuation in
+            queue.async {
+                while self.isRefreshing {
+                    usleep(50_000)
+                }
+                continuation.resume(returning: self.token)
+            }
+        }
     }
     
     func saveToken(_ token: String) {
-        self.token = token
+        queue.async {
+            self.token = token
+            print("token: \(token)")
+        }
+    }
+    
+    func setRefreshing(_ refreshing: Bool) {
+        queue.async {
+            self.isRefreshing = refreshing
+            print("refreshing: \(refreshing)")
+        }
     }
 }

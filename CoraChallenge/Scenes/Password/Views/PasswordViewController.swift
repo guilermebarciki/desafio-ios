@@ -76,6 +76,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.cleanToken()
         applyNavigationStyle()
     }
     

@@ -23,7 +23,7 @@ final class TransactionListWorker: TransactionListWorkerProtocol {
     }
 
     func fetchList() async -> Result<[ListResult], NetworkError> {
-        guard let currentToken = tokenStorage.getToken() else { return .failure(.unauthorized) }
+        guard let currentToken = await tokenStorage.getToken() else { return .failure(.unauthorized) }
         return await bankService.fetchList(token: currentToken)
     }
 }

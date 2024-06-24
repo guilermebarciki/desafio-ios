@@ -51,6 +51,10 @@ extension PasswordViewModel {
         delegate?.updateLoginButtonState(isActive: value.count >= 6)
     }
     
+    func cleanToken() {
+        worker.cleanToken()
+    }
+    
     func signIn() {
         Task {
             guard let password,
