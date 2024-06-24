@@ -52,11 +52,23 @@ struct TransactionItem: Decodable {
     let id: String
     let description: String
     let label: String
-    let entry: String
+    let entry: Entry
     let amount: Int
     let name: String
     let dateEvent: String
     let status: String
+}
+
+enum Entry: String, Decodable {
+    case debit = "DEBIT"
+    case credit = "CREDIT"
+    case none
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let value = try container.decode(String.self)
+        self = Entry(rawValue: value) ?? .none
+    }
 }
 
 struct ListResult: Decodable {

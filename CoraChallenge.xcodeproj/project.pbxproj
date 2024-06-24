@@ -12,6 +12,8 @@
 		255BFB992C1A2F1E00909DF8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255BFB982C1A2F1E00909DF8 /* Colors.xcassets */; };
 		255BFB9B2C1A306600909DF8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BFB9A2C1A306600909DF8 /* Colors.swift */; };
 		255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BFB9C2C1A354F00909DF8 /* HomeImages.swift */; };
+		2581D2732C29220900D330E8 /* TransactionSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2722C29220900D330E8 /* TransactionSegmentedControl.swift */; };
+		2581D2762C29375800D330E8 /* TransactionSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581D2752C29375700D330E8 /* TransactionSegment.swift */; };
 		25E2139F2C1915C10045D685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2139E2C1915C10045D685 /* AppDelegate.swift */; };
 		25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A02C1915C10045D685 /* SceneDelegate.swift */; };
 		25E213A32C1915C10045D685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E213A22C1915C10045D685 /* ViewController.swift */; };
@@ -72,6 +74,9 @@
 		25F560202C28E9E50034EE55 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */; };
 		25F560232C28ED270034EE55 /* TransactionItemFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560222C28ED270034EE55 /* TransactionItemFill.swift */; };
 		25F560272C28ED930034EE55 /* DateHeaderFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560262C28ED930034EE55 /* DateHeaderFill.swift */; };
+		25F560292C28F3CF0034EE55 /* DateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560282C28F3CF0034EE55 /* DateHeaderView.swift */; };
+		25F5602B2C28F63F0034EE55 /* TransactionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5602A2C28F63F0034EE55 /* TransactionItemCell.swift */; };
+		25F5602D2C28F76D0034EE55 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,8 @@
 		255BFB982C1A2F1E00909DF8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		255BFB9A2C1A306600909DF8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		255BFB9C2C1A354F00909DF8 /* HomeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImages.swift; sourceTree = "<group>"; };
+		2581D2722C29220900D330E8 /* TransactionSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSegmentedControl.swift; sourceTree = "<group>"; };
+		2581D2752C29375700D330E8 /* TransactionSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSegment.swift; sourceTree = "<group>"; };
 		25E2139B2C1915C10045D685 /* CoraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E2139E2C1915C10045D685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E213A02C1915C10045D685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +168,9 @@
 		25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		25F560222C28ED270034EE55 /* TransactionItemFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemFill.swift; sourceTree = "<group>"; };
 		25F560262C28ED930034EE55 /* DateHeaderFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderFill.swift; sourceTree = "<group>"; };
+		25F560282C28F3CF0034EE55 /* DateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderView.swift; sourceTree = "<group>"; };
+		25F5602A2C28F63F0034EE55 /* TransactionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemCell.swift; sourceTree = "<group>"; };
+		25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +224,22 @@
 				255BFB962C1A2CF100909DF8 /* GlobalMetrics.swift */,
 			);
 			path = Metrics;
+			sourceTree = "<group>";
+		};
+		2581D2712C2921CB00D330E8 /* TransactionSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				2581D2722C29220900D330E8 /* TransactionSegmentedControl.swift */,
+			);
+			path = TransactionSegmentedControl;
+			sourceTree = "<group>";
+		};
+		2581D2742C29373D00D330E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2581D2752C29375700D330E8 /* TransactionSegment.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		25BCD7462C206251000FE3D2 /* Resources */ = {
@@ -476,6 +502,7 @@
 				25F55FA82C2784EB0034EE55 /* String+Extensions.swift */,
 				25F55FCD2C27A7500034EE55 /* UIView+Extensions.swift */,
 				25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */,
+				25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,6 +599,7 @@
 		25F55FD82C28C6530034EE55 /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
+				2581D2742C29373D00D330E8 /* Model */,
 				25F560192C28E1140034EE55 /* Worker */,
 				25F55FE22C28C6830034EE55 /* Resources */,
 				25F55FE82C28C6830034EE55 /* Router */,
@@ -630,6 +658,7 @@
 		25F55FEA2C28C6830034EE55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2581D2712C2921CB00D330E8 /* TransactionSegmentedControl */,
 				25F560242C28ED7A0034EE55 /* DateHeader */,
 				25F560212C28ED0F0034EE55 /* TransactionItemCell */,
 				25F55FEB2C28C6830034EE55 /* TransactionListViewController.swift */,
@@ -731,6 +760,7 @@
 			isa = PBXGroup;
 			children = (
 				25F560222C28ED270034EE55 /* TransactionItemFill.swift */,
+				25F5602A2C28F63F0034EE55 /* TransactionItemCell.swift */,
 			);
 			path = TransactionItemCell;
 			sourceTree = "<group>";
@@ -739,6 +769,7 @@
 			isa = PBXGroup;
 			children = (
 				25F560262C28ED930034EE55 /* DateHeaderFill.swift */,
+				25F560282C28F3CF0034EE55 /* DateHeaderView.swift */,
 			);
 			path = DateHeader;
 			sourceTree = "<group>";
@@ -906,9 +937,11 @@
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
+				2581D2762C29375800D330E8 /* TransactionSegment.swift in Sources */,
 				25F560202C28E9E50034EE55 /* Array+Extensions.swift in Sources */,
 				25F55FA52C277B8C0034EE55 /* UIViewController+Extensions.swift in Sources */,
 				25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */,
+				25F560292C28F3CF0034EE55 /* DateHeaderView.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
 				25F55F5C2C264C780034EE55 /* Fonts.swift in Sources */,
 				25F55FF32C28C6830034EE55 /* TransactionListViewModel.swift in Sources */,
@@ -919,11 +952,14 @@
 				25F55F6A2C27604B0034EE55 /* HomeRouter.swift in Sources */,
 				25F5600E2C28C6BE0034EE55 /* TransactionDetailViewController.swift in Sources */,
 				25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */,
+				25F5602B2C28F63F0034EE55 /* TransactionItemCell.swift in Sources */,
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25F560272C28ED930034EE55 /* DateHeaderFill.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
 				25F55FF22C28C6830034EE55 /* TransactionListViewController.swift in Sources */,
 				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,
+				2581D2732C29220900D330E8 /* TransactionSegmentedControl.swift in Sources */,
+				25F5602D2C28F76D0034EE55 /* UITableViewCell+Extensions.swift in Sources */,
 				25F560122C28C7720034EE55 /* CoraSession.swift in Sources */,
 				25F5600A2C28C6BE0034EE55 /* TransactionDetailRouter.swift in Sources */,
 				25F55FF12C28C6830034EE55 /* TransactionListRouter.swift in Sources */,

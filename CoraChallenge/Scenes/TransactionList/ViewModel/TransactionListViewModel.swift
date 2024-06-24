@@ -24,9 +24,7 @@ class TransactionListViewModel {
     weak var delegate: TransactionListDelegate?
     
     private var transactions: [ListResult] = []
-    private var filteredTransactions: [ListResult] {
-        transactions
-    }
+    private var filteredTransactions: [ListResult] = []
     
     // MARK: - Init
     
@@ -58,7 +56,9 @@ extension TransactionListViewModel {
             switch result {
             case .success(let transactions):
                 self.transactions = transactions
-                self.delegate?.updateView()
+                self.filteredTransactions = transactions
+                
+                delegate?.updateView()
             case .failure(let failure):
                 print(failure)
             }
@@ -85,13 +85,35 @@ extension TransactionListViewModel {
         return DateHeaderFill.getFrom(date: date)
     }
     
-    func getTransactionFill(section: Int, at row: Int) -> TransactionItemFill? {
-        guard let sectionItem = filteredTransactions.safeFind(at: section),
-              let transactionItem = sectionItem.items.safeFind(at: row)
+    func getTransactionFill(indexPath: IndexPath) -> TransactionItemFill? {
+        guard let sectionItem = filteredTransactions.safeFind(at: indexPath.section),
+              let transactionItem = sectionItem.items.safeFind(at: indexPath.row)
         else {
             return nil
         }
         return TransactionItemFill.getFrom(transaction: transactionItem)
+    }
+    
+    func filterTransaction(at index: Int) {
+        guard let segment = TransactionSegment(rawValue: index) else { return }
+        switch segment {
+        case .all:
+            filteredTransactions = transactions
+        case .input:
+            filteredTransactions = filterTransactions(by: .credit)
+        case .output:
+            filteredTransactions = filterTransactions(by: .debit)
+        case .future:
+            filteredTransactions = []
+        }
+        delegate?.updateView()
+    }
+    
+    private func filterTransactions(by type: Entry) -> [ListResult] {
+        return transactions.compactMap { transactionItems in
+            let filteredItems = transactionItems.items.filter { $0.entry == type }
+            return filteredItems.isEmpty ? nil : ListResult(items: filteredItems, date: transactionItems.date)
+        }
     }
     
 }

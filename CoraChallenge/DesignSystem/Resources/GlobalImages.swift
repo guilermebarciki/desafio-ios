@@ -13,6 +13,9 @@ final class GlobalImages {
 
         case next = "ic_arrow-right"
         case eyeHidden = "ic_eye-hidden"
+        case filter = "ic_filter"
+        case credit = "ic_arrow-down-in"
+        case debit = "ic_arrow-up-out"
         
         func getImage() -> UIImage {
             return UIImage(named: self.rawValue) ?? UIImage()

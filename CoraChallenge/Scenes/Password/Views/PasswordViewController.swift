@@ -14,7 +14,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
     
     private lazy var instructionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Digite sua senha de acesso!"
+        label.text = "Digite sua senha de acesso"
         label.textColor = Colors.Neutral.black.color
         label.font = .bold(.title2)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -105,12 +105,12 @@ extension PasswordViewController {
         
         NSLayoutConstraint.activate([
             instructionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: GlobalMetrics.Padding.big),
-            instructionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -GlobalMetrics.Padding.regular),
-            instructionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: GlobalMetrics.Padding.regular)
+            instructionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -GlobalMetrics.Padding.big),
+            instructionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: GlobalMetrics.Padding.big)
         ])
         
         NSLayoutConstraint.activate([
-            passwordTextField.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: GlobalMetrics.Padding.big),
+            passwordTextField.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: GlobalMetrics.Padding.extraLarge),
             passwordTextField.trailingAnchor.constraint(equalTo: instructionLabel.trailingAnchor),
             passwordTextField.leadingAnchor.constraint(equalTo: instructionLabel.leadingAnchor)
         ])
@@ -124,9 +124,9 @@ extension PasswordViewController {
         NSLayoutConstraint.activate([
             signInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -GlobalMetrics.Padding.big),
             signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                       constant: -GlobalMetrics.Padding.regular),
+                                                       constant: -GlobalMetrics.Padding.big),
             signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                      constant: GlobalMetrics.Padding.regular)
+                                                      constant: GlobalMetrics.Padding.big)
         ])
         
         

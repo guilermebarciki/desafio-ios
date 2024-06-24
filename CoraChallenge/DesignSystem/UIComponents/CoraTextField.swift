@@ -14,7 +14,7 @@ final class CoraTextField: UITextField {
     private lazy var togglePasswordButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
-        button.setImage(GlobalImages.Icons.eyeHidden.getImage(), for: [])
+        button.setImage(GlobalImages.Icons.eyeHidden.getImage(), for: .normal)
         button.tintColor = Colors.Brand.primary.color
         #warning("metrics")
         button.setSize(32)
@@ -39,7 +39,7 @@ final class CoraTextField: UITextField {
     private func setupDefaultConfiguration(isPasswordField: Bool = false) {
         keyboardType = .numberPad
         textColor = Colors.Neutral.black.color
-        font = .bold(.title2)
+        font = .regular(.title2)
         tintColor = Colors.Brand.primary.color
         
         if isPasswordField {

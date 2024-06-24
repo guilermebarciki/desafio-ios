@@ -135,14 +135,14 @@ final class HomeViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             textStackView.topAnchor.constraint(equalTo: view.centerYAnchor),
-            textStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HomeMetrics.Padding.regular),
-            textStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.regular),
+            textStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HomeMetrics.Padding.big),
+            textStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.big),
         ])
         
         NSLayoutConstraint.activate([
-            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HomeMetrics.Padding.regular),
-            buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.regular),
-            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -HomeMetrics.Padding.regular)
+            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HomeMetrics.Padding.big),
+            buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HomeMetrics.Padding.big),
+            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -HomeMetrics.Padding.big)
         ])
         
     }

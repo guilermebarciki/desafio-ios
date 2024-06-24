@@ -24,7 +24,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
         let label = UILabel()
         label.text = "Qual seu CPF?"
         label.textColor = Colors.Neutral.black.color
-        label.font = .bold(.title1)
+        label.font = .bold(.title2)
         return label
     }()
     
@@ -102,24 +102,24 @@ extension SignInViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             textsStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: GlobalMetrics.Padding.big),
-            textsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -GlobalMetrics.Padding.regular),
-            textsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: GlobalMetrics.Padding.regular)
+            textsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -GlobalMetrics.Padding.big),
+            textsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: GlobalMetrics.Padding.big)
         ])
         
         NSLayoutConstraint.activate([
             cpfTextField.topAnchor.constraint(equalTo: textsStackView.bottomAnchor, constant: GlobalMetrics.Padding.extraLarge),
             cpfTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                   constant: -GlobalMetrics.Padding.regular),
+                                                   constant: -GlobalMetrics.Padding.big),
             cpfTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                  constant: GlobalMetrics.Padding.regular)
+                                                  constant: GlobalMetrics.Padding.big)
         ])
         
         NSLayoutConstraint.activate([
             navigationButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -GlobalMetrics.Padding.big),
             navigationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                       constant: -GlobalMetrics.Padding.regular),
+                                                       constant: -GlobalMetrics.Padding.big),
             navigationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                      constant: GlobalMetrics.Padding.regular)
+                                                      constant: GlobalMetrics.Padding.big)
         ])
     }
     
