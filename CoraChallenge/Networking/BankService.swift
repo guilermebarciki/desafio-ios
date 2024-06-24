@@ -16,7 +16,7 @@ final class BankService: BankServiceProtocol {
     private let networkService: NetworkServiceProtocol
     private let apiKey: String
 
-    init(networkService: NetworkServiceProtocol = NetworkService(), apiKey: String = "c603c3e487c4def90aa3816b5525d8d4") {
+    init(networkService: NetworkServiceProtocol = NetworkService(), apiKey: String = Configuration.apiKey) {
         self.networkService = networkService
         self.apiKey = apiKey
     }

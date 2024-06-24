@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Configuration {
+    static let apiKey: String = "c603c3e487c4def90aa3816b5525d8d4"
+}

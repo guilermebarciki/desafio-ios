@@ -33,7 +33,7 @@ final class AuthService: AuthServiceProtocol {
         return timer
     }()
     
-    private init(networkService: NetworkServiceProtocol = NetworkService(), apiKey: String = "c603c3e487c4def90aa3816b5525d8d4", tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
+    private init(networkService: NetworkServiceProtocol = NetworkService(), apiKey: String = Configuration.apiKey, tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
         self.networkService = networkService
         self.apiKey = apiKey
         self.tokenStorage = tokenStorage
