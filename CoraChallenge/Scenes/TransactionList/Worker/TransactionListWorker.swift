@@ -17,7 +17,7 @@ final class TransactionListWorker: TransactionListWorkerProtocol {
     private let bankService: BankServiceProtocol
     private var tokenStorage: TokenStorageProtocol
 
-    init(bankService: BankServiceProtocol = BankService(), tokenStorage: TokenStorageProtocol = TokenStorage()) {
+    init(bankService: BankServiceProtocol = BankService(), tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
         self.bankService = bankService
         self.tokenStorage = tokenStorage
     }

@@ -69,6 +69,9 @@
 		25F560182C28E0660034EE55 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560172C28E0660034EE55 /* LoginUseCase.swift */; };
 		25F5601B2C28E1360034EE55 /* TransactionListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601A2C28E1360034EE55 /* TransactionListWorker.swift */; };
 		25F5601E2C28E3C20034EE55 /* TransactionDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601D2C28E3C20034EE55 /* TransactionDetailWorker.swift */; };
+		25F560202C28E9E50034EE55 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */; };
+		25F560232C28ED270034EE55 /* TransactionItemFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560222C28ED270034EE55 /* TransactionItemFill.swift */; };
+		25F560272C28ED930034EE55 /* DateHeaderFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560262C28ED930034EE55 /* DateHeaderFill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		25F560172C28E0660034EE55 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		25F5601A2C28E1360034EE55 /* TransactionListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWorker.swift; sourceTree = "<group>"; };
 		25F5601D2C28E3C20034EE55 /* TransactionDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailWorker.swift; sourceTree = "<group>"; };
+		25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		25F560222C28ED270034EE55 /* TransactionItemFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemFill.swift; sourceTree = "<group>"; };
+		25F560262C28ED930034EE55 /* DateHeaderFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderFill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +475,7 @@
 				25F55FA42C277B8C0034EE55 /* UIViewController+Extensions.swift */,
 				25F55FA82C2784EB0034EE55 /* String+Extensions.swift */,
 				25F55FCD2C27A7500034EE55 /* UIView+Extensions.swift */,
+				25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -623,6 +630,8 @@
 		25F55FEA2C28C6830034EE55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				25F560242C28ED7A0034EE55 /* DateHeader */,
+				25F560212C28ED0F0034EE55 /* TransactionItemCell */,
 				25F55FEB2C28C6830034EE55 /* TransactionListViewController.swift */,
 			);
 			path = Views;
@@ -716,6 +725,22 @@
 				25F5601D2C28E3C20034EE55 /* TransactionDetailWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		25F560212C28ED0F0034EE55 /* TransactionItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				25F560222C28ED270034EE55 /* TransactionItemFill.swift */,
+			);
+			path = TransactionItemCell;
+			sourceTree = "<group>";
+		};
+		25F560242C28ED7A0034EE55 /* DateHeader */ = {
+			isa = PBXGroup;
+			children = (
+				25F560262C28ED930034EE55 /* DateHeaderFill.swift */,
+			);
+			path = DateHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -875,11 +900,13 @@
 				25F55FCA2C2794BC0034EE55 /* PasswordRouter.swift in Sources */,
 				25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */,
 				25F55FC82C2794BC0034EE55 /* PasswordStrings.swift in Sources */,
+				25F560232C28ED270034EE55 /* TransactionItemFill.swift in Sources */,
 				25F55FAF2C2787520034EE55 /* CPFMask.swift in Sources */,
 				25F55FF02C28C6830034EE55 /* TransactionListImages.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
+				25F560202C28E9E50034EE55 /* Array+Extensions.swift in Sources */,
 				25F55FA52C277B8C0034EE55 /* UIViewController+Extensions.swift in Sources */,
 				25F55FA02C2762E30034EE55 /* SignInViewController.swift in Sources */,
 				25E213DA2C191FB30045D685 /* CoraButton.swift in Sources */,
@@ -893,6 +920,7 @@
 				25F5600E2C28C6BE0034EE55 /* TransactionDetailViewController.swift in Sources */,
 				25F55F5F2C2654A50034EE55 /* HomeStrings.swift in Sources */,
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
+				25F560272C28ED930034EE55 /* DateHeaderFill.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
 				25F55FF22C28C6830034EE55 /* TransactionListViewController.swift in Sources */,
 				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,

@@ -28,9 +28,9 @@ final class CoraSession {
     }
     
     private(set) var token: String?
-//    {
-//        return nil //keychainManager.getStoredAttribute()
-//    }
+    //    {
+    //        return nil //keychainManager.getStoredAttribute()
+    //    }
     
 }
 
@@ -48,20 +48,20 @@ extension CoraSession {
     }
     
     private func storeTokenInKeychain(with token: String) {
-//        keychainManager.storeAttribute(with: token, success: {
-//            debugPrint("token stored successfully - \(token)")
-//        }, fail: {
-//            debugPrint("fail to storage the token")
-//        })
+        //        keychainManager.storeAttribute(with: token, success: {
+        //            debugPrint("token stored successfully - \(token)")
+        //        }, fail: {
+        //            debugPrint("fail to storage the token")
+        //        })
         self.token = token
     }
     
     private func updateStoredTokenInKeychain(with token: String) {
-//        keychainManager.setStoredAttribute(with: token, success: {
-//            debugPrint("token updated successfully - \(token)")
-//        }, fail: {
-//            debugPrint("fail to update the token")
-//        })
+        //        keychainManager.setStoredAttribute(with: token, success: {
+        //            debugPrint("token updated successfully - \(token)")
+        //        }, fail: {
+        //            debugPrint("fail to update the token")
+        //        })
         self.token = token
     }
     
@@ -83,12 +83,16 @@ protocol TokenStorageProtocol {
 }
 
 final class TokenStorage: TokenStorageProtocol {
+    static let shared = TokenStorage()
+    
     private var token: String?
-
+    
+    private init() { }
+    
     func getToken() -> String? {
         return token
     }
-
+    
     func saveToken(_ token: String) {
         self.token = token
     }

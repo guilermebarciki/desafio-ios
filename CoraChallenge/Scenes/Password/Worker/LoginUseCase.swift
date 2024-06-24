@@ -15,7 +15,7 @@ final class LoginWorker: LoginWorkerProtocol {
     private let authService: AuthServiceProtocol
     private var tokenStorage: TokenStorageProtocol
 
-    init(authService: AuthServiceProtocol = AuthService(), tokenStorage: TokenStorageProtocol = TokenStorage()) {
+    init(authService: AuthServiceProtocol = AuthService(), tokenStorage: TokenStorageProtocol = TokenStorage.shared) {
         self.authService = authService
         self.tokenStorage = tokenStorage
     }
