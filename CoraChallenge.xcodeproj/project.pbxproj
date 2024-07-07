@@ -82,6 +82,8 @@
 		25F560292C28F3CF0034EE55 /* DateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560282C28F3CF0034EE55 /* DateHeaderView.swift */; };
 		25F5602B2C28F63F0034EE55 /* TransactionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5602A2C28F63F0034EE55 /* TransactionItemCell.swift */; };
 		25F5602D2C28F76D0034EE55 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */; };
+		25F874242C3B569100EDCD8C /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874232C3B569100EDCD8C /* SignInTests.swift */; };
+		25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874272C3B570200EDCD8C /* MockSignInDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,8 @@
 		25F560282C28F3CF0034EE55 /* DateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderView.swift; sourceTree = "<group>"; };
 		25F5602A2C28F63F0034EE55 /* TransactionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemCell.swift; sourceTree = "<group>"; };
 		25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		25F874232C3B569100EDCD8C /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
+		25F874272C3B570200EDCD8C /* MockSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignInDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +328,8 @@
 		25E213B42C1915C50045D685 /* CoraChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				25F874292C3B576000EDCD8C /* PasswordTests */,
+				25F874212C3B566800EDCD8C /* SignIn */,
 				25E213B52C1915C50045D685 /* CoraChallengeTests.swift */,
 			);
 			path = CoraChallengeTests;
@@ -813,6 +819,38 @@
 			path = DateHeader;
 			sourceTree = "<group>";
 		};
+		25F874212C3B566800EDCD8C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				25F874222C3B567300EDCD8C /* TestUtilities */,
+				25F874232C3B569100EDCD8C /* SignInTests.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		25F874222C3B567300EDCD8C /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				25F874272C3B570200EDCD8C /* MockSignInDelegate.swift */,
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		25F874292C3B576000EDCD8C /* PasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				25F8742A2C3B577500EDCD8C /* TestUtilities */,
+			);
+			path = PasswordTests;
+			sourceTree = "<group>";
+		};
+		25F8742A2C3B577500EDCD8C /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1020,7 +1058,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */,
 				25E213B62C1915C50045D685 /* CoraChallengeTests.swift in Sources */,
+				25F874242C3B569100EDCD8C /* SignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
