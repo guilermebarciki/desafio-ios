@@ -9,7 +9,7 @@ import Foundation
 @testable import CoraChallenge
 
 class MockSignInDelegate: SignInDelegate {
-    var isNavigationButtonActive: Bool!
+    var isNavigationButtonActive: Bool = false
     
     func updateNavigationButtonState(isActive: Bool) {
         isNavigationButtonActive = isActive

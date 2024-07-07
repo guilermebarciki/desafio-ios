@@ -328,6 +328,7 @@
 		25E213B42C1915C50045D685 /* CoraChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				25F874292C3B576000EDCD8C /* PasswordTests */,
 				25F874212C3B566800EDCD8C /* SignIn */,
 				25E213B52C1915C50045D685 /* CoraChallengeTests.swift */,
 			);
@@ -831,6 +832,21 @@
 			isa = PBXGroup;
 			children = (
 				25F874272C3B570200EDCD8C /* MockSignInDelegate.swift */,
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		25F874292C3B576000EDCD8C /* PasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				25F8742A2C3B577500EDCD8C /* TestUtilities */,
+			);
+			path = PasswordTests;
+			sourceTree = "<group>";
+		};
+		25F8742A2C3B577500EDCD8C /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = TestUtilities;
 			sourceTree = "<group>";
