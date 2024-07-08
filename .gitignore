@@ -27,3 +27,6 @@ node_modules/
 *.swp
 *.swo
 *~
+
+# Ignore Xcode user data
+*.xcuserstate
