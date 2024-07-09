@@ -14,7 +14,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
     
     private lazy var instructionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Digite sua senha de acesso"
+        label.text = PasswordStrings.View.instructionLabel.localized
         label.textColor = Colors.Neutral.black.color
         label.font = .bold(.title2)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,9 +31,11 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
     }()
     
     private lazy var forgotPasswordButton: UIButton = {
-        let action = UIAction { _ in print("Forgot Password Clicked") }
+        let action = UIAction { _ in
+            print("Forgot Password Clicked")
+        }
         let button = UIButton()
-        button.setTitle("Esqueci minha senha", for: .normal)
+        button.setTitle(PasswordStrings.View.forgotPasswordButtonTitle.localized, for: .normal)
         button.titleLabel?.font = .regular(.body2)
         button.setTitleColor(Colors.Brand.primary.color, for: .normal)
         button.contentHorizontalAlignment = .left
@@ -43,7 +45,7 @@ class PasswordViewController: UIViewController, CoraNavigationStylable {
     
     private lazy var signInButton: CoraButton = {
         let button = CoraButton(
-            title: "Próximo",
+            title: PasswordStrings.View.signInButtonTitle.localized,
             size: .regular,
             style: .primary,
             icon: GlobalImages.Icons.next.getImage(),
@@ -117,7 +119,7 @@ extension PasswordViewController {
         ])
         
         NSLayoutConstraint.activate([
-            forgotPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 48),
+            forgotPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: PasswordMetrics.Padding.passwordTextFieldBottom),
             forgotPasswordButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
             forgotPasswordButton.leadingAnchor.constraint(lessThanOrEqualTo: passwordTextField.leadingAnchor)
         ])
@@ -146,16 +148,6 @@ extension PasswordViewController {
 }
 
 
-// MARK: - Private methods
-    
-extension PasswordViewController {}
-
-
-// MARK: - Public methods
-    
-extension PasswordViewController {}
-
-
 // MARK: - Actions
     
 extension PasswordViewController {
@@ -173,22 +165,23 @@ extension PasswordViewController {
 extension PasswordViewController: PasswordDelegate {
     
     func signInSuccess() {
-        DispatchQueue.main.async { [weak self] in
-            self?.hideLoadingIndicator()
-            self?.router?.navigateToTransactionList()
+        DispatchQueue.main.async {
+            self.hideLoadingIndicator()
+            self.router?.navigateToTransactionList()
         }
-
     }
     
-    func signInFail(with title: String, and message: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.hideLoadingIndicator()
-            self?.displayAlert(title: title, message: message)
+    func signInFail(error: String) {
+        DispatchQueue.main.async {
+            self.hideLoadingIndicator()
+            self.displayAlert(title: PasswordStrings.View.loginErrorMessageTitle.localized, message: error)
         }
     }
     
     func updateLoginButtonState(isActive: Bool) {
-        signInButton.setActive(isActive)
+        DispatchQueue.main.async {
+            self.signInButton.setActive(isActive)
+        }
     }
 }
 

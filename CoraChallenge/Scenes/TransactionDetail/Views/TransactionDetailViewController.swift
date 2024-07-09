@@ -113,7 +113,7 @@ extension TransactionDetailViewController {
     
     private func setupInterface() {
         view.backgroundColor = Colors.Neutral.white.color
-        title = "Detalhes da transferência"
+        title = TransactionDetailStrings.View.title.localized
         view.addSubview(scrollView)
         view.addSubview(shareButton)
         scrollView.addSubview(stackView)
@@ -159,24 +159,18 @@ extension TransactionDetailViewController {
 }
 
 
-// MARK: - Private methods
-
-extension TransactionDetailViewController {}
-
-
-// MARK: - Public methods
-
-extension TransactionDetailViewController {}
-
-
-// MARK: - Actions
-
-extension TransactionDetailViewController {}
-
-
 // MARK: - TransactionDetailDelegate
 
 extension TransactionDetailViewController: TransactionDetailDelegate {
+    
+    func fetchDetailFail(error: String) {
+        DispatchQueue.main.async {
+            self.hideLoadingIndicator()
+            self.displayAlert(title: "Erro", message: error)
+        }
+    }
+    
+    
     func updateView(with fill: TransactionDetailFill) {
         DispatchQueue.main.async {
             self.headerView.fill(icon: GlobalImages.Icons.credit.getImage(), title: fill.title)
@@ -187,4 +181,5 @@ extension TransactionDetailViewController: TransactionDetailDelegate {
             self.descriptionInfoView.fill(firstText: fill.descriptionTitle, contentTexts: fill.descriptionDetails)
         }
     }
+    
 }

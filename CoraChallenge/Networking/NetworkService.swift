@@ -7,13 +7,28 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case invalidURL
     case requestFailed
     case invalidResponse
     case decodingError
     case unauthorized
     case unknownStatusCode(Int)
+    
+    static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
+        switch (lhs, rhs) {
+        case (.invalidURL, .invalidURL),
+             (.requestFailed, .requestFailed),
+             (.invalidResponse, .invalidResponse),
+             (.decodingError, .decodingError),
+             (.unauthorized, .unauthorized):
+            return true
+        case (.unknownStatusCode(let code1), .unknownStatusCode(let code2)):
+            return code1 == code2
+        default:
+            return false
+        }
+    }
 }
 
 enum Endpoint {

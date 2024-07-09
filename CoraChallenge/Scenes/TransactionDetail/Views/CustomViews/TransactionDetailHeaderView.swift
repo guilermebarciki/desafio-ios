@@ -12,7 +12,7 @@ final class TransactionDetailHeaderView: UIView {
     private lazy var iconImage: UIImageView = {
         let imageView = UIImageView()
         imageView.tintColor = Colors.Neutral.black.color
-        imageView.setSize(24)
+        imageView.setSize(GlobalMetrics.Icon.regularSize)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

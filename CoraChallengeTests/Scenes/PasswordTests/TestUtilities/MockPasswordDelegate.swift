@@ -9,6 +9,7 @@ import Foundation
 @testable import CoraChallenge
 
 final class MockPasswordDelegate: PasswordDelegate {
+    
     var isLoginButtonActive: Bool?
     var signInSuccessCalled = false
     var signInFailCalled = false
@@ -21,7 +22,7 @@ final class MockPasswordDelegate: PasswordDelegate {
         signInSuccessCalled = true
     }
     
-    func signInFail(with title: String, and message: String) {
+    func signInFail(error: String)  {
         signInFailCalled = true
     }
 }

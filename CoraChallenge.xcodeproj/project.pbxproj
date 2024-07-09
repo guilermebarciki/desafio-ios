@@ -73,7 +73,7 @@
 		25F5600D2C28C6BE0034EE55 /* TransactionDetailImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560052C28C6BE0034EE55 /* TransactionDetailImages.swift */; };
 		25F5600E2C28C6BE0034EE55 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560072C28C6BE0034EE55 /* TransactionDetailViewController.swift */; };
 		25F5600F2C28C6BE0034EE55 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560092C28C6BE0034EE55 /* TransactionDetailViewModel.swift */; };
-		25F560182C28E0660034EE55 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560172C28E0660034EE55 /* LoginUseCase.swift */; };
+		25F560182C28E0660034EE55 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F560172C28E0660034EE55 /* LoginWorker.swift */; };
 		25F5601B2C28E1360034EE55 /* TransactionListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601A2C28E1360034EE55 /* TransactionListWorker.swift */; };
 		25F5601E2C28E3C20034EE55 /* TransactionDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601D2C28E3C20034EE55 /* TransactionDetailWorker.swift */; };
 		25F560202C28E9E50034EE55 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */; };
@@ -87,6 +87,22 @@
 		25F8742F2C3B6A7F00EDCD8C /* PasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8742E2C3B6A7F00EDCD8C /* PasswordTests.swift */; };
 		25F874312C3B6C0700EDCD8C /* MockPasswordDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874302C3B6C0700EDCD8C /* MockPasswordDelegate.swift */; };
 		25F874332C3B6C3B00EDCD8C /* MockLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */; };
+		25F874362C3CBAA600EDCD8C /* PasswordMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874352C3CBAA600EDCD8C /* PasswordMetrics.swift */; };
+		25F874392C3CBD9000EDCD8C /* TransactionListMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874382C3CBD9000EDCD8C /* TransactionListMetrics.swift */; };
+		25F8743C2C3DB36F00EDCD8C /* AsyncScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8743B2C3DB36F00EDCD8C /* AsyncScheduler.swift */; };
+		25F874402C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8743F2C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift */; };
+		25F874442C3DBB5000EDCD8C /* TransactionListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874432C3DBB5000EDCD8C /* TransactionListTests.swift */; };
+		25F874472C3DBB8C00EDCD8C /* MockTransactionListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874462C3DBB8C00EDCD8C /* MockTransactionListDelegate.swift */; };
+		25F874492C3DC34D00EDCD8C /* MockTransactionListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874482C3DC34D00EDCD8C /* MockTransactionListWorker.swift */; };
+		25F8744D2C3DC3A400EDCD8C /* TransactionDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8744C2C3DC3A400EDCD8C /* TransactionDetailTests.swift */; };
+		25F8744F2C3DC50800EDCD8C /* MockTransactionDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8744E2C3DC50800EDCD8C /* MockTransactionDetailsWorker.swift */; };
+		25F874512C3DC52800EDCD8C /* MockTransactionDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874502C3DC52700EDCD8C /* MockTransactionDetailDelegate.swift */; };
+		25F874542C3DC67C00EDCD8C /* LoginWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874532C3DC67B00EDCD8C /* LoginWorkerTests.swift */; };
+		25F874582C3DC6C100EDCD8C /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874572C3DC6C100EDCD8C /* MockAuthService.swift */; };
+		25F8745A2C3DC74C00EDCD8C /* MockTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874592C3DC74C00EDCD8C /* MockTokenStorage.swift */; };
+		25F8745C2C3DC97700EDCD8C /* MockBankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8745B2C3DC97700EDCD8C /* MockBankService.swift */; };
+		25F8745F2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8745E2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift */; };
+		25F874622C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874612C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +193,7 @@
 		25F560052C28C6BE0034EE55 /* TransactionDetailImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailImages.swift; sourceTree = "<group>"; };
 		25F560072C28C6BE0034EE55 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		25F560092C28C6BE0034EE55 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
-		25F560172C28E0660034EE55 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		25F560172C28E0660034EE55 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		25F5601A2C28E1360034EE55 /* TransactionListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWorker.swift; sourceTree = "<group>"; };
 		25F5601D2C28E3C20034EE55 /* TransactionDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailWorker.swift; sourceTree = "<group>"; };
 		25F5601F2C28E9E50034EE55 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -191,6 +207,22 @@
 		25F8742E2C3B6A7F00EDCD8C /* PasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTests.swift; sourceTree = "<group>"; };
 		25F874302C3B6C0700EDCD8C /* MockPasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordDelegate.swift; sourceTree = "<group>"; };
 		25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginWorker.swift; sourceTree = "<group>"; };
+		25F874352C3CBAA600EDCD8C /* PasswordMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMetrics.swift; sourceTree = "<group>"; };
+		25F874382C3CBD9000EDCD8C /* TransactionListMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListMetrics.swift; sourceTree = "<group>"; };
+		25F8743B2C3DB36F00EDCD8C /* AsyncScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncScheduler.swift; sourceTree = "<group>"; };
+		25F8743F2C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSchedulerSpy.swift; sourceTree = "<group>"; };
+		25F874432C3DBB5000EDCD8C /* TransactionListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListTests.swift; sourceTree = "<group>"; };
+		25F874462C3DBB8C00EDCD8C /* MockTransactionListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListDelegate.swift; sourceTree = "<group>"; };
+		25F874482C3DC34D00EDCD8C /* MockTransactionListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionListWorker.swift; sourceTree = "<group>"; };
+		25F8744C2C3DC3A400EDCD8C /* TransactionDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailTests.swift; sourceTree = "<group>"; };
+		25F8744E2C3DC50800EDCD8C /* MockTransactionDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionDetailsWorker.swift; sourceTree = "<group>"; };
+		25F874502C3DC52700EDCD8C /* MockTransactionDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionDetailDelegate.swift; sourceTree = "<group>"; };
+		25F874532C3DC67B00EDCD8C /* LoginWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerTests.swift; sourceTree = "<group>"; };
+		25F874572C3DC6C100EDCD8C /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		25F874592C3DC74C00EDCD8C /* MockTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTokenStorage.swift; sourceTree = "<group>"; };
+		25F8745B2C3DC97700EDCD8C /* MockBankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBankService.swift; sourceTree = "<group>"; };
+		25F8745E2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWorkerTests.swift; sourceTree = "<group>"; };
+		25F874612C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsWorkerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,8 +366,8 @@
 		25E213B42C1915C50045D685 /* CoraChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				25F8742C2C3B6A4B00EDCD8C /* PasswordTests */,
-				25F874212C3B566800EDCD8C /* SignIn */,
+				25F874412C3DBB1E00EDCD8C /* Scenes */,
+				25F8743D2C3DB41A00EDCD8C /* Common */,
 				25E213B52C1915C50045D685 /* CoraChallengeTests.swift */,
 			);
 			path = CoraChallengeTests;
@@ -559,6 +591,7 @@
 		25F55FAC2C27873F0034EE55 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				25F8743A2C3DB34B00EDCD8C /* AsyncScheduler */,
 				25F55FAD2C2787470034EE55 /* Masks */,
 			);
 			path = Common;
@@ -575,6 +608,7 @@
 		25F55FB02C2794820034EE55 /* Password */ = {
 			isa = PBXGroup;
 			children = (
+				25F874342C3CBA9000EDCD8C /* Enums */,
 				25F560162C28E0560034EE55 /* Worker */,
 				25F55FBD2C2794BC0034EE55 /* Resources */,
 				25F55FC32C2794BC0034EE55 /* Router */,
@@ -647,6 +681,7 @@
 		25F55FD82C28C6530034EE55 /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
+				25F874372C3CBD7F00EDCD8C /* Enums */,
 				2581D2742C29373D00D330E8 /* Model */,
 				25F560192C28E1140034EE55 /* Worker */,
 				25F55FE22C28C6830034EE55 /* Resources */,
@@ -786,7 +821,7 @@
 		25F560162C28E0560034EE55 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
-				25F560172C28E0660034EE55 /* LoginUseCase.swift */,
+				25F560172C28E0660034EE55 /* LoginWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -845,6 +880,7 @@
 		25F8742C2C3B6A4B00EDCD8C /* PasswordTests */ = {
 			isa = PBXGroup;
 			children = (
+				25F874522C3DC66500EDCD8C /* Worker */,
 				25F8742D2C3B6A5500EDCD8C /* TestUtilities */,
 				25F8742E2C3B6A7F00EDCD8C /* PasswordTests.swift */,
 			);
@@ -858,6 +894,130 @@
 				25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */,
 			);
 			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		25F874342C3CBA9000EDCD8C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				25F874352C3CBAA600EDCD8C /* PasswordMetrics.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		25F874372C3CBD7F00EDCD8C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				25F874382C3CBD9000EDCD8C /* TransactionListMetrics.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		25F8743A2C3DB34B00EDCD8C /* AsyncScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				25F8743B2C3DB36F00EDCD8C /* AsyncScheduler.swift */,
+			);
+			path = AsyncScheduler;
+			sourceTree = "<group>";
+		};
+		25F8743D2C3DB41A00EDCD8C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				25F874562C3DC6B200EDCD8C /* Services */,
+				25F8743E2C3DB42500EDCD8C /* AsyncSchedulerSpy */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		25F8743E2C3DB42500EDCD8C /* AsyncSchedulerSpy */ = {
+			isa = PBXGroup;
+			children = (
+				25F8743F2C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift */,
+			);
+			path = AsyncSchedulerSpy;
+			sourceTree = "<group>";
+		};
+		25F874412C3DBB1E00EDCD8C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				25F8744A2C3DC36600EDCD8C /* TransactionDetail */,
+				25F874422C3DBB3000EDCD8C /* TransactionList */,
+				25F8742C2C3B6A4B00EDCD8C /* PasswordTests */,
+				25F874212C3B566800EDCD8C /* SignIn */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		25F874422C3DBB3000EDCD8C /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				25F8745D2C3DC9D700EDCD8C /* Worker */,
+				25F874452C3DBB7900EDCD8C /* TestUtilities */,
+				25F874432C3DBB5000EDCD8C /* TransactionListTests.swift */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		25F874452C3DBB7900EDCD8C /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				25F874462C3DBB8C00EDCD8C /* MockTransactionListDelegate.swift */,
+				25F874482C3DC34D00EDCD8C /* MockTransactionListWorker.swift */,
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		25F8744A2C3DC36600EDCD8C /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				25F874602C3DCB7A00EDCD8C /* Worker */,
+				25F8744B2C3DC38D00EDCD8C /* TestUtilities */,
+				25F8744C2C3DC3A400EDCD8C /* TransactionDetailTests.swift */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		25F8744B2C3DC38D00EDCD8C /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				25F8744E2C3DC50800EDCD8C /* MockTransactionDetailsWorker.swift */,
+				25F874502C3DC52700EDCD8C /* MockTransactionDetailDelegate.swift */,
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		25F874522C3DC66500EDCD8C /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				25F874532C3DC67B00EDCD8C /* LoginWorkerTests.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		25F874562C3DC6B200EDCD8C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				25F874572C3DC6C100EDCD8C /* MockAuthService.swift */,
+				25F874592C3DC74C00EDCD8C /* MockTokenStorage.swift */,
+				25F8745B2C3DC97700EDCD8C /* MockBankService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		25F8745D2C3DC9D700EDCD8C /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				25F8745E2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		25F874602C3DCB7A00EDCD8C /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				25F874612C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1018,11 +1178,13 @@
 				25F55FCA2C2794BC0034EE55 /* PasswordRouter.swift in Sources */,
 				25F55F682C275C1E0034EE55 /* CoraButtonMetrics.swift in Sources */,
 				25F55FC82C2794BC0034EE55 /* PasswordStrings.swift in Sources */,
+				25F874392C3CBD9000EDCD8C /* TransactionListMetrics.swift in Sources */,
 				25F560232C28ED270034EE55 /* TransactionItemFill.swift in Sources */,
 				25F55FAF2C2787520034EE55 /* CPFMask.swift in Sources */,
 				25F55FF02C28C6830034EE55 /* TransactionListImages.swift in Sources */,
 				255BFB932C1A2BCD00909DF8 /* HomeMetrics.swift in Sources */,
 				25F55F9B2C2762E30034EE55 /* SignInRouter.swift in Sources */,
+				25F874362C3CBAA600EDCD8C /* PasswordMetrics.swift in Sources */,
 				2581D27B2C29B5C600D330E8 /* TransactionDetailComponent.swift in Sources */,
 				25E213A12C1915C10045D685 /* SceneDelegate.swift in Sources */,
 				2581D2762C29375800D330E8 /* TransactionSegment.swift in Sources */,
@@ -1036,7 +1198,7 @@
 				2581D27D2C29DCD900D330E8 /* TokenStorage.swift in Sources */,
 				25F55FF32C28C6830034EE55 /* TransactionListViewModel.swift in Sources */,
 				2581D27F2C29DD3800D330E8 /* KeychainManager.swift in Sources */,
-				25F560182C28E0660034EE55 /* LoginUseCase.swift in Sources */,
+				25F560182C28E0660034EE55 /* LoginWorker.swift in Sources */,
 				25F55FD52C289B2F0034EE55 /* BankService.swift in Sources */,
 				25F55FD12C289AE20034EE55 /* NetworkService.swift in Sources */,
 				25F55FC62C2794BC0034EE55 /* PasswordViewController.swift in Sources */,
@@ -1047,6 +1209,7 @@
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25F560272C28ED930034EE55 /* DateHeaderFill.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
+				25F8743C2C3DB36F00EDCD8C /* AsyncScheduler.swift in Sources */,
 				25F55FF22C28C6830034EE55 /* TransactionListViewController.swift in Sources */,
 				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,
 				2581D2732C29220900D330E8 /* TransactionSegmentedControl.swift in Sources */,
@@ -1068,10 +1231,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				25F8742F2C3B6A7F00EDCD8C /* PasswordTests.swift in Sources */,
+				25F874622C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift in Sources */,
+				25F8745A2C3DC74C00EDCD8C /* MockTokenStorage.swift in Sources */,
 				25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */,
+				25F874442C3DBB5000EDCD8C /* TransactionListTests.swift in Sources */,
+				25F874402C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift in Sources */,
+				25F874512C3DC52800EDCD8C /* MockTransactionDetailDelegate.swift in Sources */,
+				25F874582C3DC6C100EDCD8C /* MockAuthService.swift in Sources */,
 				25E213B62C1915C50045D685 /* CoraChallengeTests.swift in Sources */,
+				25F8744F2C3DC50800EDCD8C /* MockTransactionDetailsWorker.swift in Sources */,
 				25F874332C3B6C3B00EDCD8C /* MockLoginWorker.swift in Sources */,
+				25F8745F2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift in Sources */,
+				25F874492C3DC34D00EDCD8C /* MockTransactionListWorker.swift in Sources */,
 				25F874242C3B569100EDCD8C /* SignInTests.swift in Sources */,
+				25F874472C3DBB8C00EDCD8C /* MockTransactionListDelegate.swift in Sources */,
+				25F874542C3DC67C00EDCD8C /* LoginWorkerTests.swift in Sources */,
+				25F8745C2C3DC97700EDCD8C /* MockBankService.swift in Sources */,
+				25F8744D2C3DC3A400EDCD8C /* TransactionDetailTests.swift in Sources */,
 				25F874312C3B6C0700EDCD8C /* MockPasswordDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

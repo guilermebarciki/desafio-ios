@@ -8,14 +8,11 @@
 import Foundation
 
 protocol TransactionListDelegate: AnyObject {
-    
     func updateView()
     func startLoading()
     func stopLoading()
-    
+    func fetchListFail(error: String)
 }
-
-typealias TransactionListNavigationData = Any
 
 class TransactionListViewModel {
     
@@ -27,22 +24,19 @@ class TransactionListViewModel {
     
     private var transactions: [ListResult] = []
     private var filteredTransactions: [ListResult] = []
+    private let asyncSchedulerFactory: AsyncSchedulerFactory
     
     // MARK: - Init
     
-    init(delegate: TransactionListDelegate?, worker: TransactionListWorkerProtocol = TransactionListWorker()) {
+    init(
+        delegate: TransactionListDelegate?,
+        worker: TransactionListWorkerProtocol = TransactionListWorker(),
+        asyncSchedulerFactory: AsyncSchedulerFactory = TaskAsyncSchedulerFactory()
+    ) {
         self.delegate = delegate
         self.worker = worker
+        self.asyncSchedulerFactory = asyncSchedulerFactory
     }
-    
-}
-
-
-// MARK: - Navigation
-
-extension TransactionListViewModel {
-    
-    func prepareForNavigation(with navigationData: TransactionListNavigationData) {}
     
 }
 
@@ -54,7 +48,9 @@ extension TransactionListViewModel {
     func fetchTransactionList() {
         defer { delegate?.stopLoading() }
         
-        Task {
+        asyncSchedulerFactory.create { [weak self] in
+            guard let self else { return }
+            
             delegate?.startLoading()
             let result = await worker.fetchList()
             
@@ -64,8 +60,8 @@ extension TransactionListViewModel {
                 self.filteredTransactions = transactions
                 
                 delegate?.updateView()
-            case .failure(let failure):
-                print(failure)
+            case .failure(let error):
+                delegate?.fetchListFail(error: error.localizedDescription)
             }
         }
     }

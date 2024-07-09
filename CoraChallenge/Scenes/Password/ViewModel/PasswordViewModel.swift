@@ -10,7 +10,7 @@ import Foundation
 protocol PasswordDelegate: AnyObject {
     func updateLoginButtonState(isActive: Bool)
     func signInSuccess()
-    func signInFail(with title: String, and message: String)
+    func signInFail(error: String)
 }
 
 typealias PasswordNavigationData = String
@@ -24,12 +24,18 @@ class PasswordViewModel {
     
     weak var delegate: PasswordDelegate?
     private let worker: LoginWorkerProtocol
+    private let asyncSchedulerFactory: AsyncSchedulerFactory
     
     // MARK: - Init
     
-    init(delegate: PasswordDelegate?, worker: LoginWorkerProtocol = LoginWorker()) {
+    init(
+        delegate: PasswordDelegate?,
+        worker: LoginWorkerProtocol = LoginWorker(),
+        asyncSchedulerFactory: AsyncSchedulerFactory = TaskAsyncSchedulerFactory()
+    ) {
         self.delegate = delegate
         self.worker = worker
+        self.asyncSchedulerFactory = asyncSchedulerFactory
     }
 }
 
@@ -56,7 +62,9 @@ extension PasswordViewModel {
     }
     
     func signIn() {
-        Task {
+        asyncSchedulerFactory.create { [weak self] in
+            guard let self else { return }
+            
             guard let password,
                   let cpf else { return }
             
@@ -66,7 +74,7 @@ extension PasswordViewModel {
             case .success:
                 delegate?.signInSuccess()
             case .failure(let error):
-                delegate?.signInFail(with: PasswordStrings.View.loginErrorMessageTitle.localized, and: error.localizedDescription)
+                delegate?.signInFail(error: error.localizedDescription)
             }
         }
     }

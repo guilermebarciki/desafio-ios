@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 struct TransactionItemFill {
     
     var icon: UIImage
