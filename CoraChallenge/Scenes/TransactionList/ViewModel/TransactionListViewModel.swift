@@ -31,7 +31,11 @@ class TransactionListViewModel {
     
     // MARK: - Init
     
-    init(delegate: TransactionListDelegate?, worker: TransactionListWorkerProtocol = TransactionListWorker()) {
+    init(
+        delegate: TransactionListDelegate?,
+        worker: TransactionListWorkerProtocol = TransactionListWorker(),
+        asyncSchedulerFactory: AsyncSchedulerFactory = TaskAsyncSchedulerFactory()
+    ) {
         self.delegate = delegate
         self.worker = worker
     }

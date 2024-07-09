@@ -27,7 +27,11 @@ class PasswordViewModel {
     
     // MARK: - Init
     
-    init(delegate: PasswordDelegate?, worker: LoginWorkerProtocol = LoginWorker()) {
+    init(
+        delegate: PasswordDelegate?,
+        worker: LoginWorkerProtocol = LoginWorker(),
+        asyncSchedulerFactory: AsyncSchedulerFactory = TaskAsyncSchedulerFactory()
+    ) {
         self.delegate = delegate
         self.worker = worker
     }

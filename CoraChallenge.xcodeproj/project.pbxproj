@@ -89,6 +89,8 @@
 		25F874332C3B6C3B00EDCD8C /* MockLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */; };
 		25F874362C3CBAA600EDCD8C /* PasswordMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874352C3CBAA600EDCD8C /* PasswordMetrics.swift */; };
 		25F874392C3CBD9000EDCD8C /* TransactionListMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874382C3CBD9000EDCD8C /* TransactionListMetrics.swift */; };
+		25F8743C2C3DB36F00EDCD8C /* AsyncScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8743B2C3DB36F00EDCD8C /* AsyncScheduler.swift */; };
+		25F874402C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8743F2C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +197,8 @@
 		25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginWorker.swift; sourceTree = "<group>"; };
 		25F874352C3CBAA600EDCD8C /* PasswordMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMetrics.swift; sourceTree = "<group>"; };
 		25F874382C3CBD9000EDCD8C /* TransactionListMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListMetrics.swift; sourceTree = "<group>"; };
+		25F8743B2C3DB36F00EDCD8C /* AsyncScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncScheduler.swift; sourceTree = "<group>"; };
+		25F8743F2C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSchedulerSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +342,7 @@
 		25E213B42C1915C50045D685 /* CoraChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				25F8743D2C3DB41A00EDCD8C /* Common */,
 				25F8742C2C3B6A4B00EDCD8C /* PasswordTests */,
 				25F874212C3B566800EDCD8C /* SignIn */,
 				25E213B52C1915C50045D685 /* CoraChallengeTests.swift */,
@@ -563,6 +568,7 @@
 		25F55FAC2C27873F0034EE55 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				25F8743A2C3DB34B00EDCD8C /* AsyncScheduler */,
 				25F55FAD2C2787470034EE55 /* Masks */,
 			);
 			path = Common;
@@ -882,6 +888,30 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		25F8743A2C3DB34B00EDCD8C /* AsyncScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				25F8743B2C3DB36F00EDCD8C /* AsyncScheduler.swift */,
+			);
+			path = AsyncScheduler;
+			sourceTree = "<group>";
+		};
+		25F8743D2C3DB41A00EDCD8C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				25F8743E2C3DB42500EDCD8C /* AsyncSchedulerSpy */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		25F8743E2C3DB42500EDCD8C /* AsyncSchedulerSpy */ = {
+			isa = PBXGroup;
+			children = (
+				25F8743F2C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift */,
+			);
+			path = AsyncSchedulerSpy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1071,6 +1101,7 @@
 				255BFB9D2C1A354F00909DF8 /* HomeImages.swift in Sources */,
 				25F560272C28ED930034EE55 /* DateHeaderFill.swift in Sources */,
 				25E213D72C1917AB0045D685 /* HomeViewController.swift in Sources */,
+				25F8743C2C3DB36F00EDCD8C /* AsyncScheduler.swift in Sources */,
 				25F55FF22C28C6830034EE55 /* TransactionListViewController.swift in Sources */,
 				25F55FAB2C2786E00034EE55 /* MaskProtocol.swift in Sources */,
 				2581D2732C29220900D330E8 /* TransactionSegmentedControl.swift in Sources */,
@@ -1093,6 +1124,7 @@
 			files = (
 				25F8742F2C3B6A7F00EDCD8C /* PasswordTests.swift in Sources */,
 				25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */,
+				25F874402C3DB44B00EDCD8C /* AsyncSchedulerSpy.swift in Sources */,
 				25E213B62C1915C50045D685 /* CoraChallengeTests.swift in Sources */,
 				25F874332C3B6C3B00EDCD8C /* MockLoginWorker.swift in Sources */,
 				25F874242C3B569100EDCD8C /* SignInTests.swift in Sources */,
