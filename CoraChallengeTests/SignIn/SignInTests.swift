@@ -45,6 +45,7 @@ class SignInViewModelTests: XCTestCase {
         viewModel.validateCPF(invalidCPF)
         
         // Then
+        XCTAssertNil(viewModel.getCPF())
         XCTAssertFalse(mockDelegate.isNavigationButtonActive)
     }
     

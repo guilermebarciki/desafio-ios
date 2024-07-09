@@ -20,7 +20,7 @@ class PasswordViewModel {
     // MARK: - Properties
     
     private var password: String?
-    private var cpf: String?
+    private(set) var cpf: String?
     
     weak var delegate: PasswordDelegate?
     private let worker: LoginWorkerProtocol
@@ -66,7 +66,7 @@ extension PasswordViewModel {
             case .success:
                 delegate?.signInSuccess()
             case .failure(let error):
-                delegate?.signInFail(with: "Falha de Login", and: error.localizedDescription)
+                delegate?.signInFail(with: PasswordStrings.View.loginErrorMessageTitle.localized, and: error.localizedDescription)
             }
         }
     }

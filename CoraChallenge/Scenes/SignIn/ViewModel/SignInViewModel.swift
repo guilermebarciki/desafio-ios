@@ -30,22 +30,12 @@ class SignInViewModel {
     
 }
 
-
-// MARK: - Navigation
-
-extension SignInViewModel {
-    
-    
-}
-
-
 // MARK: - Public Methods
 
 extension SignInViewModel {
     
     func validateCPF(_ value: String?) {
-        guard let cpf = value?.trimmingCharacters(in: .whitespacesAndNewlines).stringWithNumbersOnly(),
-              !cpf.isEmpty,
+        guard let cpf = value?.stringWithNumbersOnly(),
               cpf.isValidCPF() else {
             invalidateCPF()
             return
