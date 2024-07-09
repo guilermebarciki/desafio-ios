@@ -31,3 +31,4 @@ node_modules/
 # Ignore Xcode user data
 *.xcuserstate
 *.xcuserstate
+.DS_Store

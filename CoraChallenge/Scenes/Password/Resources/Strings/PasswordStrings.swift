@@ -13,6 +13,9 @@ final class PasswordStrings {
         var table: LocalizeTable { return .home }
         
         case loginErrorMessageTitle
+        case instructionLabel
+        case forgotPasswordButtonTitle
+        case signInButtonTitle
     }
   
 }
