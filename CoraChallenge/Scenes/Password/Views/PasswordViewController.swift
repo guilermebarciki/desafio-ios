@@ -165,22 +165,23 @@ extension PasswordViewController {
 extension PasswordViewController: PasswordDelegate {
     
     func signInSuccess() {
-        DispatchQueue.main.async { [weak self] in
-            self?.hideLoadingIndicator()
-            self?.router?.navigateToTransactionList()
+        DispatchQueue.main.async {
+            self.hideLoadingIndicator()
+            self.router?.navigateToTransactionList()
         }
-
     }
     
     func signInFail(with title: String, and message: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.hideLoadingIndicator()
-            self?.displayAlert(title: title, message: message)
+        DispatchQueue.main.async {
+            self.hideLoadingIndicator()
+            self.displayAlert(title: title, message: message)
         }
     }
     
     func updateLoginButtonState(isActive: Bool) {
-        signInButton.setActive(isActive)
+        DispatchQueue.main.async {
+            self.signInButton.setActive(isActive)
+        }
     }
 }
 

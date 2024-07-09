@@ -64,10 +64,12 @@ extension UIViewController {
         }
     }
     
+    
     func hideLoadingIndicator() {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
             self.activityIndicator.removeFromSuperview()
         }
     }
+    
 }
