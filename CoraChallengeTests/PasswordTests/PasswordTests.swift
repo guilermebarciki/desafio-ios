@@ -89,20 +89,20 @@ final class PasswordViewModelTests: XCTestCase {
     }
     
     func testSignIn_WithInvalidCredentials_ShouldCallSignInFail() async {
-//        // Given
-//        let cpf = "12345678909"
-//        let password = "123456"
-//        let error = NetworkError.unauthorized
-//        mockWorker.loginResult = .failure(error)
-//        
-//        viewModel.prepareForNavigation(with: cpf)
-//        viewModel.validatePassword(password)
-//        
-//        // When
-//        try await viewModel.signIn()
-//        
-//        // Then
-//        XCTAssertTrue(mockDelegate.signInFailCalled)
+        // Given
+        let cpf = "12345678909"
+        let password = "123456"
+        let error = NetworkError.unauthorized
+        mockWorker.loginResult = .failure(error)
+        
+        viewModel.prepareForNavigation(with: cpf)
+        viewModel.validatePassword(password)
+        
+        // When
+        viewModel.signIn()
+        await asyncSchedulerFactorySpy.executeLast()
+        // Then
+        XCTAssertTrue(mockDelegate.signInFailCalled)
     }
     
 }
