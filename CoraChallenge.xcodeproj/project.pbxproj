@@ -102,6 +102,7 @@
 		25F8745A2C3DC74C00EDCD8C /* MockTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874592C3DC74C00EDCD8C /* MockTokenStorage.swift */; };
 		25F8745C2C3DC97700EDCD8C /* MockBankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8745B2C3DC97700EDCD8C /* MockBankService.swift */; };
 		25F8745F2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8745E2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift */; };
+		25F874622C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874612C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		25F874592C3DC74C00EDCD8C /* MockTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTokenStorage.swift; sourceTree = "<group>"; };
 		25F8745B2C3DC97700EDCD8C /* MockBankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBankService.swift; sourceTree = "<group>"; };
 		25F8745E2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWorkerTests.swift; sourceTree = "<group>"; };
+		25F874612C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsWorkerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -968,6 +970,7 @@
 		25F8744A2C3DC36600EDCD8C /* TransactionDetail */ = {
 			isa = PBXGroup;
 			children = (
+				25F874602C3DCB7A00EDCD8C /* Worker */,
 				25F8744B2C3DC38D00EDCD8C /* TestUtilities */,
 				25F8744C2C3DC3A400EDCD8C /* TransactionDetailTests.swift */,
 			);
@@ -1005,6 +1008,14 @@
 			isa = PBXGroup;
 			children = (
 				25F8745E2C3DC9EB00EDCD8C /* TransactionListWorkerTests.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		25F874602C3DCB7A00EDCD8C /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				25F874612C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -1220,6 +1231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25F8742F2C3B6A7F00EDCD8C /* PasswordTests.swift in Sources */,
+				25F874622C3DCB9200EDCD8C /* TransactionDetailsWorkerTests.swift in Sources */,
 				25F8745A2C3DC74C00EDCD8C /* MockTokenStorage.swift in Sources */,
 				25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */,
 				25F874442C3DBB5000EDCD8C /* TransactionListTests.swift in Sources */,

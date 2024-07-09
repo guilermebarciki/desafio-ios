@@ -10,13 +10,14 @@ import Foundation
 
 class MockBankService: BankServiceProtocol {
     var fetchListResult: Result<[ListResult], NetworkError>?
+    var fetchDetailsResult: Result<ItemDetails, NetworkError>?
     
     func fetchList(token: String) async -> Result<[ListResult], NetworkError> {
         return fetchListResult ?? .failure(.unauthorized)
     }
     
     func fetchDetails(id: String, token: String) async -> Result<ItemDetails, NetworkError> {
-        return .failure(.unauthorized)
+        return fetchDetailsResult ?? .failure(.unauthorized)
     }
     
 }
