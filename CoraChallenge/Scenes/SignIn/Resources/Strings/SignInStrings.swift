@@ -13,6 +13,10 @@ final class SignInStrings {
         var table: LocalizeTable { return .signIn }
 
         case title
+        case welcomeLabel
+        case cpfLabel
+        case navigationButtonTitle
+
     }
 
     

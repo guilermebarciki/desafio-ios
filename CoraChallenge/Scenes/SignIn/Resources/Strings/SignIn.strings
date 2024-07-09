@@ -8,3 +8,6 @@
 //
 
 "title" = "Login Cora";
+"welcomeLabel" = "Bem-vindo de volta!";
+"cpfLabel" = "Qual seu CPF?";
+"navigationButtonTitle" = "Próximo";

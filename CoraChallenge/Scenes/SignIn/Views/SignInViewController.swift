@@ -14,7 +14,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
     
     private lazy var welcomeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Bem-vindo de volta!"
+        label.text = SignInStrings.View.welcomeLabel.localized
         label.textColor = Colors.Neutral.gray01.color
         label.font = .regular(.body1)
         return label
@@ -22,7 +22,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
     
     private lazy var cpfLabel: UILabel = {
         let label = UILabel()
-        label.text = "Qual seu CPF?"
+        label.text = SignInStrings.View.cpfLabel.localized
         label.textColor = Colors.Neutral.black.color
         label.font = .bold(.title2)
         return label
@@ -39,7 +39,7 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
     
     private lazy var navigationButton: CoraButton = {
         let button = CoraButton(
-            title: "Próximo",
+            title: SignInStrings.View.navigationButtonTitle.localized,
             size: .regular,
             style: .primary,
             icon: GlobalImages.Icons.next.getImage(),
@@ -52,7 +52,6 @@ final class SignInViewController: UIViewController, CoraNavigationStylable {
         return button
     }()
     
-#warning("pode fazer um CoraTextField")
     private lazy var cpfTextField: CoraTextField = {
         let textField = CoraTextField()
         textField.delegate = self
@@ -124,16 +123,6 @@ extension SignInViewController {
     }
     
 }
-
-
-// MARK: - Private methods
-
-extension SignInViewController {}
-
-
-// MARK: - Public methods
-
-extension SignInViewController {}
 
 
 // MARK: - Actions
