@@ -8,9 +8,6 @@
 import XCTest
 @testable import CoraChallenge
 
-import XCTest
-@testable import CoraChallenge
-
 final class TransactionListTests: XCTestCase {
     
     var sut: TransactionListViewModel!
@@ -76,7 +73,16 @@ final class TransactionListTests: XCTestCase {
         // Given
         let transactions = [
             ListResult(
-                items: [TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: "2024-07-07", status: "Completed")],
+                items: [TransactionItem(
+                    id: "1",
+                    description: "Desc1",
+                    label: "Label1",
+                    entry: .credit,
+                    amount: 100,
+                    name: "Name1",
+                    dateEvent: "2024-07-07",
+                    status: "Completed"
+                )],
                 date: "2024-07-07"
             )
         ]
@@ -97,8 +103,26 @@ final class TransactionListTests: XCTestCase {
         let transactions = [
             ListResult(
                 items: [
-                    TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: "2024-07-07", status: "Completed"),
-                    TransactionItem(id: "2", description: "Desc2", label: "Label2", entry: .debit, amount: 200, name: "Name2", dateEvent: "2024-07-08", status: "Completed")
+                    TransactionItem(
+                        id: "1",
+                        description: "Desc1",
+                        label: "Label1",
+                        entry: .credit,
+                        amount: 100,
+                        name: "Name1",
+                        dateEvent: "2024-07-07",
+                        status: "Completed"
+                    ),
+                    TransactionItem(
+                        id: "2",
+                        description: "Desc2",
+                        label: "Label2",
+                        entry: .debit,
+                        amount: 200,
+                        name: "Name2",
+                        dateEvent: "2024-07-08",
+                        status: "Completed"
+                    )
                 ],
                 date: "2024-07-07"
             )
@@ -120,8 +144,26 @@ final class TransactionListTests: XCTestCase {
         let transactions = [
             ListResult(
                 items: [
-                    TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: "2024-07-07", status: "Completed"),
-                    TransactionItem(id: "2", description: "Desc2", label: "Label2", entry: .debit, amount: 200, name: "Name2", dateEvent: "2024-07-08", status: "Completed")
+                    TransactionItem(
+                        id: "1",
+                        description: "Desc1",
+                        label: "Label1",
+                        entry: .credit,
+                        amount: 100,
+                        name: "Name1",
+                        dateEvent: "2024-07-07",
+                        status: "Completed"
+                    ),
+                    TransactionItem(
+                        id: "2",
+                        description: "Desc2",
+                        label: "Label2",
+                        entry: .debit,
+                        amount: 200,
+                        name: "Name2",
+                        dateEvent: "2024-07-08",
+                        status: "Completed"
+                    )
                 ],
                 date: "2024-07-07"
             )
@@ -140,7 +182,16 @@ final class TransactionListTests: XCTestCase {
     
     func testGetTransactionDetailNavigationData() async {
         // Given
-        let transactionItem = TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: "2024-07-07", status: "Completed")
+        let transactionItem = TransactionItem(
+            id: "1",
+            description: "Desc1",
+            label: "Label1",
+            entry: .credit,
+            amount: 100,
+            name: "Name1",
+            dateEvent: "2024-07-07",
+            status: "Completed"
+        )
         let transactions = [ListResult(items: [transactionItem], date: "2024-07-07")]
         mockWorker.fetchListResult = .success(transactions)
         
@@ -157,7 +208,19 @@ final class TransactionListTests: XCTestCase {
     func testGetTransactionsCount() async {
         // Given
         let transactions = [
-            ListResult(items: [TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: "2024-07-07", status: "Completed")], date: "2024-07-07")
+            ListResult(
+                items: [TransactionItem(
+                    id: "1",
+                    description: "Desc1",
+                    label: "Label1",
+                    entry: .credit,
+                    amount: 100,
+                    name: "Name1",
+                    dateEvent: "2024-07-07",
+                    status: "Completed"
+                )],
+                date: "2024-07-07"
+            )
         ]
         mockWorker.fetchListResult = .success(transactions)
         
@@ -173,7 +236,19 @@ final class TransactionListTests: XCTestCase {
         // Given
         let date = "2024-07-07"
         let transactions = [
-            ListResult(items: [TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: date, status: "Completed")], date: date)
+            ListResult(
+                items: [TransactionItem(
+                    id: "1",
+                    description: "Desc1",
+                    label: "Label1",
+                    entry: .credit,
+                    amount: 100,
+                    name: "Name1",
+                    dateEvent: date,
+                    status: "Completed"
+                )],
+                date: date
+            )
         ]
         mockWorker.fetchListResult = .success(transactions)
         
@@ -189,7 +264,16 @@ final class TransactionListTests: XCTestCase {
     
     func testGetTransactionFill() async {
         // Given
-        let transactionItem = TransactionItem(id: "1", description: "Desc1", label: "Label1", entry: .credit, amount: 100, name: "Name1", dateEvent: "2024-07-07", status: "Completed")
+        let transactionItem = TransactionItem(
+            id: "1",
+            description: "Desc1",
+            label: "Label1",
+            entry: .credit,
+            amount: 100,
+            name: "Name1",
+            dateEvent: "2024-07-07",
+            status: "Completed"
+        )
         let transactions = [ListResult(items: [transactionItem], date: "2024-07-07")]
         mockWorker.fetchListResult = .success(transactions)
         
