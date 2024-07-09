@@ -84,6 +84,9 @@
 		25F5602D2C28F76D0034EE55 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */; };
 		25F874242C3B569100EDCD8C /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874232C3B569100EDCD8C /* SignInTests.swift */; };
 		25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874272C3B570200EDCD8C /* MockSignInDelegate.swift */; };
+		25F8742F2C3B6A7F00EDCD8C /* PasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8742E2C3B6A7F00EDCD8C /* PasswordTests.swift */; };
+		25F874312C3B6C0700EDCD8C /* MockPasswordDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874302C3B6C0700EDCD8C /* MockPasswordDelegate.swift */; };
+		25F874332C3B6C3B00EDCD8C /* MockLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +188,9 @@
 		25F5602C2C28F76D0034EE55 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		25F874232C3B569100EDCD8C /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
 		25F874272C3B570200EDCD8C /* MockSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignInDelegate.swift; sourceTree = "<group>"; };
+		25F8742E2C3B6A7F00EDCD8C /* PasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTests.swift; sourceTree = "<group>"; };
+		25F874302C3B6C0700EDCD8C /* MockPasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordDelegate.swift; sourceTree = "<group>"; };
+		25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +334,7 @@
 		25E213B42C1915C50045D685 /* CoraChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				25F874292C3B576000EDCD8C /* PasswordTests */,
+				25F8742C2C3B6A4B00EDCD8C /* PasswordTests */,
 				25F874212C3B566800EDCD8C /* SignIn */,
 				25E213B52C1915C50045D685 /* CoraChallengeTests.swift */,
 			);
@@ -836,17 +842,20 @@
 			path = TestUtilities;
 			sourceTree = "<group>";
 		};
-		25F874292C3B576000EDCD8C /* PasswordTests */ = {
+		25F8742C2C3B6A4B00EDCD8C /* PasswordTests */ = {
 			isa = PBXGroup;
 			children = (
-				25F8742A2C3B577500EDCD8C /* TestUtilities */,
+				25F8742D2C3B6A5500EDCD8C /* TestUtilities */,
+				25F8742E2C3B6A7F00EDCD8C /* PasswordTests.swift */,
 			);
 			path = PasswordTests;
 			sourceTree = "<group>";
 		};
-		25F8742A2C3B577500EDCD8C /* TestUtilities */ = {
+		25F8742D2C3B6A5500EDCD8C /* TestUtilities */ = {
 			isa = PBXGroup;
 			children = (
+				25F874302C3B6C0700EDCD8C /* MockPasswordDelegate.swift */,
+				25F874322C3B6C3B00EDCD8C /* MockLoginWorker.swift */,
 			);
 			path = TestUtilities;
 			sourceTree = "<group>";
@@ -1058,9 +1067,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F8742F2C3B6A7F00EDCD8C /* PasswordTests.swift in Sources */,
 				25F874282C3B570200EDCD8C /* MockSignInDelegate.swift in Sources */,
 				25E213B62C1915C50045D685 /* CoraChallengeTests.swift in Sources */,
+				25F874332C3B6C3B00EDCD8C /* MockLoginWorker.swift in Sources */,
 				25F874242C3B569100EDCD8C /* SignInTests.swift in Sources */,
+				25F874312C3B6C0700EDCD8C /* MockPasswordDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

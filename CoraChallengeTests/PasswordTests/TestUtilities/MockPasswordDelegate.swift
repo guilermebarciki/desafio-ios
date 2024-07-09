@@ -6,3 +6,22 @@
 //
 
 import Foundation
+@testable import CoraChallenge
+
+final class MockPasswordDelegate: PasswordDelegate {
+    var isLoginButtonActive: Bool?
+    var signInSuccessCalled = false
+    var signInFailCalled = false
+    
+    func updateLoginButtonState(isActive: Bool) {
+        isLoginButtonActive = isActive
+    }
+    
+    func signInSuccess() {
+        signInSuccessCalled = true
+    }
+    
+    func signInFail(with title: String, and message: String) {
+        signInFailCalled = true
+    }
+}
