@@ -8,15 +8,11 @@
 import Foundation
 
 protocol TransactionListDelegate: AnyObject {
-    
     func updateView()
     func startLoading()
     func stopLoading()
     func fetchListFail(error: String)
-    
 }
-
-typealias TransactionListNavigationData = Any
 
 class TransactionListViewModel {
     
@@ -41,15 +37,6 @@ class TransactionListViewModel {
         self.worker = worker
         self.asyncSchedulerFactory = asyncSchedulerFactory
     }
-    
-}
-
-
-// MARK: - Navigation
-
-extension TransactionListViewModel {
-    
-    func prepareForNavigation(with navigationData: TransactionListNavigationData) {}
     
 }
 

@@ -112,17 +112,6 @@ extension TransactionListViewController {
 }
 
 
-// MARK: - Navigation
-
-extension TransactionListViewController {
-    
-    func prepareForNavigation(with navigationData: TransactionListNavigationData) {
-        viewModel.prepareForNavigation(with: navigationData)
-    }
-    
-}
-
-
 // MARK: - Private methods
 
 extension TransactionListViewController {
