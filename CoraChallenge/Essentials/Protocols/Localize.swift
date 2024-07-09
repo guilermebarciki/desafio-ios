@@ -32,6 +32,7 @@ enum LocalizeTable: String {
     case signIn = "SignIn"
     case password = "Password"
     case transactionList = "TransactionList"
+    case transactionDetail = "TransactionDetail"
     
 }
 
