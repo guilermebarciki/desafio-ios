@@ -76,11 +76,9 @@ final class AuthService: AuthServiceProtocol {
         switch result {
         case .success(let authResponse):
             tokenStorage.saveToken(authResponse.token)
-            print("refresh success \(authResponse.token)")
             return .success(authResponse.token)
         case .failure(let error):
             stopTokenRefresh()
-            print("refresh error \(error)")
             return .failure(error)
         }
     }

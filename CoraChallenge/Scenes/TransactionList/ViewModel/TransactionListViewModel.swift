@@ -12,6 +12,7 @@ protocol TransactionListDelegate: AnyObject {
     func updateView()
     func startLoading()
     func stopLoading()
+    func fetchListFail(error: String)
     
 }
 
@@ -64,8 +65,8 @@ extension TransactionListViewModel {
                 self.filteredTransactions = transactions
                 
                 delegate?.updateView()
-            case .failure(let failure):
-                print(failure)
+            case .failure(let error):
+                delegate?.fetchListFail(error: error.localizedDescription)
             }
         }
     }

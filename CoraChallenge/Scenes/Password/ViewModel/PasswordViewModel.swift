@@ -10,7 +10,7 @@ import Foundation
 protocol PasswordDelegate: AnyObject {
     func updateLoginButtonState(isActive: Bool)
     func signInSuccess()
-    func signInFail(with title: String, and message: String)
+    func signInFail(error: String)
 }
 
 typealias PasswordNavigationData = String
@@ -66,7 +66,7 @@ extension PasswordViewModel {
             case .success:
                 delegate?.signInSuccess()
             case .failure(let error):
-                delegate?.signInFail(with: PasswordStrings.View.loginErrorMessageTitle.localized, and: error.localizedDescription)
+                delegate?.signInFail(error: error.localizedDescription)
             }
         }
     }

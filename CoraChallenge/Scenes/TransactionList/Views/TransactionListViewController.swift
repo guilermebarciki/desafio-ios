@@ -150,6 +150,13 @@ extension TransactionListViewController {}
 // MARK: - TransactionListDelegate
 
 extension TransactionListViewController: TransactionListDelegate {
+    
+    func fetchListFail(error: String) {
+        DispatchQueue.main.async {
+            self.displayAlert(title: "Erro", message: error)
+        }
+    }
+    
     func startLoading() {
         DispatchQueue.main.async { [weak self] in
             self?.showLoadingIndicator()

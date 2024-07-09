@@ -163,14 +163,23 @@ extension TransactionDetailViewController {
 
 extension TransactionDetailViewController: TransactionDetailDelegate {
     
-    @MainActor
+    func fetchDetailFail(error: String) {
+        DispatchQueue.main.async {
+            self.hideLoadingIndicator()
+            self.displayAlert(title: "Erro", message: error)
+        }
+    }
+    
+    
     func updateView(with fill: TransactionDetailFill) {
+        DispatchQueue.main.async {
             self.headerView.fill(icon: GlobalImages.Icons.credit.getImage(), title: fill.title)
             self.valueInfoView.fill(firstText: fill.valueTitle, secondText: fill.value)
             self.dateInfoView.fill(firstText: fill.dateTitle, secondText: fill.date)
             self.senderInfoView.fill(firstText: fill.senderTitle, secondText: fill.sender, contentTexts: fill.senderDetails)
             self.recipientInfoView.fill(firstText: fill.recipientTitle, secondText: fill.recipient, contentTexts: fill.recipientDetails)
             self.descriptionInfoView.fill(firstText: fill.descriptionTitle, contentTexts: fill.descriptionDetails)
+        }
     }
     
 }

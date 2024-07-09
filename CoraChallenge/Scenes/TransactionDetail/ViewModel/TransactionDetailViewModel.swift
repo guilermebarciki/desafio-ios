@@ -9,6 +9,7 @@ import Foundation
 
 protocol TransactionDetailDelegate: AnyObject {
     func updateView(with: TransactionDetailFill)
+    func fetchDetailFail(error: String)
 }
 
 typealias TransactionDetailNavigationData = (id: String, entry: Entry)
@@ -58,8 +59,8 @@ extension TransactionDetailViewModel {
             switch result {
             case .success(let details):
                 delegate?.updateView(with: TransactionDetailFill.getFrom(transactionDetail: details, entry: entry))
-            case .failure(let failure):
-                return
+            case .failure(let error):
+                delegate?.fetchDetailFail(error: error.localizedDescription)
             }
         }
     }

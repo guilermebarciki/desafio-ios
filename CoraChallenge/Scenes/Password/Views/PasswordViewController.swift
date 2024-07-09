@@ -171,10 +171,10 @@ extension PasswordViewController: PasswordDelegate {
         }
     }
     
-    func signInFail(with title: String, and message: String) {
+    func signInFail(error: String) {
         DispatchQueue.main.async {
             self.hideLoadingIndicator()
-            self.displayAlert(title: title, message: message)
+            self.displayAlert(title: PasswordStrings.View.loginErrorMessageTitle.localized, message: error)
         }
     }
     
