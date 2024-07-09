@@ -24,6 +24,7 @@ class TransactionDetailViewModel {
     
     private var entry: Entry = .none
     private var transactionId: String = ""
+    private let asyncSchedulerFactory: AsyncSchedulerFactory
     
     
     // MARK: - Init
@@ -35,6 +36,7 @@ class TransactionDetailViewModel {
     ) {
         self.delegate = delegate
         self.worker = worker
+        self.asyncSchedulerFactory = asyncSchedulerFactory
     }
     
 }
@@ -57,7 +59,9 @@ extension TransactionDetailViewModel {
 extension TransactionDetailViewModel {
     
     func fetchTransactionDetail() {
-        Task {
+        asyncSchedulerFactory.create { [weak self] in
+            guard let self else { return }
+            
             let result = await worker.fetchDetail(id: self.transactionId)
             
             switch result {

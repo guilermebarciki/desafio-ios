@@ -28,6 +28,7 @@ class TransactionListViewModel {
     
     private var transactions: [ListResult] = []
     private var filteredTransactions: [ListResult] = []
+    private let asyncSchedulerFactory: AsyncSchedulerFactory
     
     // MARK: - Init
     
@@ -38,6 +39,7 @@ class TransactionListViewModel {
     ) {
         self.delegate = delegate
         self.worker = worker
+        self.asyncSchedulerFactory = asyncSchedulerFactory
     }
     
 }
@@ -59,7 +61,9 @@ extension TransactionListViewModel {
     func fetchTransactionList() {
         defer { delegate?.stopLoading() }
         
-        Task {
+        asyncSchedulerFactory.create { [weak self] in
+            guard let self else { return }
+            
             delegate?.startLoading()
             let result = await worker.fetchList()
             

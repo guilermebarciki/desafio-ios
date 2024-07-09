@@ -24,6 +24,7 @@ class PasswordViewModel {
     
     weak var delegate: PasswordDelegate?
     private let worker: LoginWorkerProtocol
+    private let asyncSchedulerFactory: AsyncSchedulerFactory
     
     // MARK: - Init
     
@@ -34,6 +35,7 @@ class PasswordViewModel {
     ) {
         self.delegate = delegate
         self.worker = worker
+        self.asyncSchedulerFactory = asyncSchedulerFactory
     }
 }
 
@@ -60,7 +62,9 @@ extension PasswordViewModel {
     }
     
     func signIn() {
-        Task {
+        asyncSchedulerFactory.create { [weak self] in
+            guard let self else { return }
+            
             guard let password,
                   let cpf else { return }
             

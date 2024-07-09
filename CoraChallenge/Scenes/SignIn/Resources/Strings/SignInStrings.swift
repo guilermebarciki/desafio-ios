@@ -19,6 +19,5 @@ final class SignInStrings {
 
     }
 
-    
 }
 

@@ -27,6 +27,7 @@ final class PasswordViewModelTests: XCTestCase {
         viewModel = nil
         mockDelegate = nil
         mockWorker = nil
+        asyncSchedulerFactorySpy = nil
         super.tearDown()
     }
     
@@ -81,7 +82,7 @@ final class PasswordViewModelTests: XCTestCase {
         viewModel.validatePassword(password)
         
         // When
-        self.viewModel.signIn()
+        viewModel.signIn()
         await asyncSchedulerFactorySpy.executeLast()
         
         // Then
