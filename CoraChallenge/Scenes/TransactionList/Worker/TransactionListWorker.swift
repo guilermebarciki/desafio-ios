@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol TransactionListWorkerProtocol {
     func fetchList() async -> Result<[ListResult], NetworkError>
 }

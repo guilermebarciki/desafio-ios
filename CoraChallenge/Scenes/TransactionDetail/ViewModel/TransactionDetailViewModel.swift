@@ -22,8 +22,8 @@ class TransactionDetailViewModel {
     weak var delegate: TransactionDetailDelegate?
     private let worker: TransactionDetailsWorkerProtocol
     
-    private var entry: Entry = .none
-    private var transactionId: String = ""
+    private(set) var entry: Entry = .none
+    private(set) var transactionId: String = ""
     private let asyncSchedulerFactory: AsyncSchedulerFactory
     
     

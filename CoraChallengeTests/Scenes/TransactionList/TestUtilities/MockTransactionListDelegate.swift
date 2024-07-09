@@ -8,14 +8,6 @@
 import Foundation
 @testable import CoraChallenge
 
-class MockTransactionListWorker: TransactionListWorkerProtocol {
-    var fetchListResult: Result<[ListResult], NetworkError>?
-    
-    func fetchList() async -> Result<[ListResult], NetworkError> {
-        return fetchListResult ?? .failure(.unauthorized)
-    }
-}
-
 class MockTransactionListDelegate: TransactionListDelegate {
     var updateViewCalled = false
     var startLoadingCalled = false
