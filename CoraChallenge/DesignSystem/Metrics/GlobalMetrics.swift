@@ -16,4 +16,8 @@ enum GlobalMetrics {
         static let extraLarge: CGFloat = 32
     }
     
+    enum Icon {
+        static let regularSize: CGFloat = 24
+    }
+    
 }

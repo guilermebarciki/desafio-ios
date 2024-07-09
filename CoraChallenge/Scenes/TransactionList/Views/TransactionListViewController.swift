@@ -25,7 +25,7 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
         let button = UIButton()
         button.setImage(GlobalImages.Icons.filter.getImage(), for: .normal)
         button.tintColor = Colors.Brand.primary.color
-        button.setSize(24)
+        button.setSize(GlobalMetrics.Icon.regularSize)
         return button
     }()
     
@@ -33,7 +33,7 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
         let stackView = UIStackView(arrangedSubviews: [segmentedControl, filterButton])
         stackView.axis = .horizontal
         stackView.alignment = .center
-        stackView.spacing = 16
+        stackView.spacing = GlobalMetrics.Padding.regular
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.layoutMargins = UIEdgeInsets(top: GlobalMetrics.Padding.regular,
@@ -52,7 +52,7 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.sectionFooterHeight = 24
+        tableView.sectionFooterHeight = TransactionListMetrics.Tableview.footerHeight
         return tableView
     }()
     
@@ -83,7 +83,7 @@ class TransactionListViewController: UIViewController, CoraNavigationStylable {
 extension TransactionListViewController {
     
     private func setupInterface() {
-        title = "Extrato"
+        title = TransactionListStrings.View.title.localized
         view.backgroundColor = Colors.Neutral.white.color
         
         view.addSubview(topStackView)
@@ -200,7 +200,7 @@ extension TransactionListViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        32
+        TransactionListMetrics.Tableview.headerHeight
     }
     
 }
